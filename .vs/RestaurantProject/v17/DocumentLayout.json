@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.entitylayer\\concrete\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|solutionrelative:signalr.entitylayer\\concrete\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.entitylayer\\concrete\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}|SignalR.EntityLayer\\SignalR.EntityLayer.csproj|solutionrelative:signalr.entitylayer\\concrete\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}|SignalR.DataAccessLayer\\SignalR.DataAccessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.dataaccesslayer\\concrete\\signalrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}|SignalR.DataAccessLayer\\SignalR.DataAccessLayer.csproj|solutionrelative:signalr.dataaccesslayer\\concrete\\signalrcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,34 +21,35 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SignalRContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\Concrete\\SignalRContext.cs",
+              "RelativeDocumentMoniker": "SignalR.DataAccessLayer\\Concrete\\SignalRContext.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\Concrete\\SignalRContext.cs",
+              "RelativeToolTip": "SignalR.DataAccessLayer\\Concrete\\SignalRContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T03:11:19.038Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Booking.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.EntityLayer\\Concrete\\Booking.cs",
-              "RelativeDocumentMoniker": "SignalR.EntityLayer\\Concrete\\Booking.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.EntityLayer\\Concrete\\Booking.cs",
-              "RelativeToolTip": "SignalR.EntityLayer\\Concrete\\Booking.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
+              "Title": "20250120033732_initialize_db.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs",
+              "RelativeDocumentMoniker": "SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs",
+              "RelativeToolTip": "SignalR.DataAccessLayer\\Migrations\\20250120033732_initialize_db.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T02:36:34.764Z",
+              "WhenOpened": "2025-01-20T03:37:32.75Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "About.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.EntityLayer\\Concrete\\About.cs",
-              "RelativeDocumentMoniker": "SignalR.EntityLayer\\Concrete\\About.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.EntityLayer\\Concrete\\About.cs",
-              "RelativeToolTip": "SignalR.EntityLayer\\Concrete\\About.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T02:36:25.72Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
