@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.WebApi", "SignalR.WebApi\SignalR.WebApi.csproj", "{FD48A081-2C92-4A14-9C27-557CF8597DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.DataAccessLayer", "SignalR.DataAccessLayer\SignalR.DataAccessLayer.csproj", "{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.EntityLayer", "SignalR.EntityLayer\SignalR.EntityLayer.csproj", "{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD48A081-2C92-4A14-9C27-557CF8597DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD48A081-2C92-4A14-9C27-557CF8597DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD48A081-2C92-4A14-9C27-557CF8597DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD48A081-2C92-4A14-9C27-557CF8597DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD0EB0E-7966-452A-B0F8-2D7F5784CFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
