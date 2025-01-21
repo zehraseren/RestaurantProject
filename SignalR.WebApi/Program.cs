@@ -1,4 +1,8 @@
+using SignalR.BusinessLayer.Container;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.ContainerDependencies();
 
 // Add services to the container.
 
