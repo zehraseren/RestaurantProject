@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.dtolayer\\categorydtos\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|solutionrelative:signalr.dtolayer\\categorydtos\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GetCategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs",
-              "RelativeDocumentMoniker": "SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs*",
-              "RelativeToolTip": "SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T15:44:51.343Z",
-              "EditorCaption": ""
             }
           ]
         }
