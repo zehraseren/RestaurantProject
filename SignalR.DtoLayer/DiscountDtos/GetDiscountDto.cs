@@ -1,6 +1,6 @@
 ﻿namespace SignalR.DtoLayer.DiscountDtos
 {
-    public class GetContactDto
+    public class GetDiscountDto
     {
         public int DiscountId { get; set; }
         public string Title { get; set; }
