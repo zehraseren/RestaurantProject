@@ -3,44 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\aboutmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\aboutmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\bookingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\bookingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\contactmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\contactmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\discountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\discountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\featuremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\featuremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\socialmediamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\socialmediamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\concrete\\testimonialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\concrete\\testimonialmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.businesslayer\\container\\extentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99C96BAE-E59C-4DA7-979F-12F013DF1CE9}|SignalR.BusinessLayer\\SignalR.BusinessLayer.csproj|solutionrelative:signalr.businesslayer\\container\\extentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.dtolayer\\categorydtos\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|solutionrelative:signalr.dtolayer\\categorydtos\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,132 +22,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookingManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\BookingManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\BookingManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\BookingManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\BookingManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:28:28.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AboutManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\AboutManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\AboutManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\AboutManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\AboutManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Title": "GetCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs",
+              "RelativeDocumentMoniker": "SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs*",
+              "RelativeToolTip": "SignalR.DtoLayer\\CategoryDtos\\GetCategoryDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:28:14.224Z",
+              "WhenOpened": "2025-01-21T15:44:51.343Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\CategoryManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\CategoryManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\CategoryManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\CategoryManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:28:21.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ContactManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\ContactManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\ContactManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\ContactManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\ContactManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:29:08.866Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DiscountManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\DiscountManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\DiscountManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\DiscountManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\DiscountManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:28:47.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FeatureManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\FeatureManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\FeatureManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\FeatureManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\FeatureManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:28:59.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\ProductManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\ProductManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\ProductManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\ProductManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:29:24.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SocialMediaManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\SocialMediaManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\SocialMediaManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\SocialMediaManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\SocialMediaManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:29:16.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TestimonialManager.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\TestimonialManager.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Concrete\\TestimonialManager.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Concrete\\TestimonialManager.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Concrete\\TestimonialManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:29:32.083Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Extentions.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Container\\Extentions.cs",
-              "RelativeDocumentMoniker": "SignalR.BusinessLayer\\Container\\Extentions.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.BusinessLayer\\Container\\Extentions.cs",
-              "RelativeToolTip": "SignalR.BusinessLayer\\Container\\Extentions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-20T04:20:39.96Z"
             }
           ]
         }
