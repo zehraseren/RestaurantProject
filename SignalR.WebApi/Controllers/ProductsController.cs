@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SignalR.DtoLayer.ProductDtos;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
@@ -9,17 +10,26 @@ namespace SignalR.WebApi.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
+        private readonly IMapper _mapper;
         private readonly IProductService _productService;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService, IMapper mapper)
         {
+            _mapper = mapper;
             _productService = productService;
         }
 
         [HttpGet]
         public IActionResult ProductList()
         {
-            var values = _productService.TGetListAll();
+            var values = _mapper.Map<List<ResultProductDto>>(_productService.TGetListAll());
+            return Ok(values);
+        }
+
+        [HttpGet("ProductListWithCategory")]
+        public IActionResult ProductListWithCategory()
+        {
+            var values = _mapper.Map<List<ResultProductWithCategory>>(_productService.TGetProductsWithCategories());
             return Ok(values);
         }
 

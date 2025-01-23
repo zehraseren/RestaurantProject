@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webapi\\mapping\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|solutionrelative:signalr.webapi\\mapping\\productmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|solutionrelative:signalr.webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}|SignalR.DataAccessLayer\\SignalR.DataAccessLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.dataaccesslayer\\entityframework\\efproductdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3CC494E-1D27-4296-A611-FBB9F5A8DE7E}|SignalR.DataAccessLayer\\SignalR.DataAccessLayer.csproj|solutionrelative:signalr.dataaccesslayer\\entityframework\\efproductdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductMapping.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Mapping\\ProductMapping.cs",
+              "RelativeDocumentMoniker": "SignalR.WebApi\\Mapping\\ProductMapping.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Mapping\\ProductMapping.cs*",
+              "RelativeToolTip": "SignalR.WebApi\\Mapping\\ProductMapping.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAACGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:49:56.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EfProductDal.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\EntityFramework\\EfProductDal.cs",
+              "RelativeDocumentMoniker": "SignalR.DataAccessLayer\\EntityFramework\\EfProductDal.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DataAccessLayer\\EntityFramework\\EfProductDal.cs",
+              "RelativeToolTip": "SignalR.DataAccessLayer\\EntityFramework\\EfProductDal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T20:47:46.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "SignalR.WebApi\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "SignalR.WebApi\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T18:52:53.086Z",
+              "EditorCaption": ""
             }
           ]
         }

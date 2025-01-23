@@ -1,3 +1,4 @@
+using System.Reflection;
 using SignalR.BusinessLayer.Container;
 using SignalR.DataAccessLayer.Concrete;
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.ContainerDependencies();
 
 builder.Services.AddDbContext<SignalRContext>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 builder.Services.AddCors(opt =>
 {
@@ -28,6 +30,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
