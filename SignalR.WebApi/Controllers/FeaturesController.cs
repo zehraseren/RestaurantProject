@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SignalR.DtoLayer.FeatureDtos;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
@@ -9,17 +10,19 @@ namespace SignalR.WebApi.Controllers
     [ApiController]
     public class FeaturesController : ControllerBase
     {
+        private readonly IMapper _mapper;
         private readonly IFeatureService _featureService;
 
-        public FeaturesController(IFeatureService featureService)
+        public FeaturesController(IFeatureService featureService, IMapper mapper)
         {
+            _mapper = mapper;
             _featureService = featureService;
         }
 
         [HttpGet]
         public IActionResult FeatureList()
         {
-            var values = _featureService.TGetListAll();
+            var values = _mapper.Map<List<ResultFeatureDto>>(_featureService.TGetListAll());
             return Ok(values);
         }
 

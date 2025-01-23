@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.TestimonialDtos;
@@ -9,10 +10,13 @@ namespace SignalR.WebApi.Controllers
     [ApiController]
     public class TestimonialsController : ControllerBase
     {
+        private readonly IMapper _mapper;
         private readonly ITestimonialService _testimonialService;
 
-        public TestimonialsController(ITestimonialService testimonialService)
+        public TestimonialsController(ITestimonialService testimonialService, IMapper mapper)
         {
+            _mapper = mapper;
+            _mapper = mapper;
             _testimonialService = testimonialService;
         }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.SocialMediaDtos;
@@ -9,10 +10,12 @@ namespace SignalR.WebApi.Controllers
     [ApiController]
     public class SocialMediasController : ControllerBase
     {
+        private readonly IMapper _mapper;
         private readonly ISocialMediaService _socialMediaService;
 
-        public SocialMediasController(ISocialMediaService socialMediaService)
+        public SocialMediasController(ISocialMediaService socialMediaService, IMapper mapper)
         {
+            _mapper = mapper;
             _socialMediaService = socialMediaService;
         }
 
