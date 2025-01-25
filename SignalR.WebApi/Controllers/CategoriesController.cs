@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetCategory(int id)
+        {
+            var value = _categoryService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateCategory(CreateCategoryDto cadto)
         {
@@ -38,7 +45,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Kategori başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
             var value = _categoryService.TGetById(id);
@@ -57,13 +64,6 @@ namespace SignalR.WebApi.Controllers
             };
             _categoryService.TUpdate(category);
             return Ok("Kategori başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetCategory")]
-        public IActionResult GetCategory(int id)
-        {
-            var value = _categoryService.TGetById(id);
-            return Ok(value);
         }
     }
 }
