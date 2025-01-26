@@ -1,4 +1,4 @@
-﻿namespace SignalR.DtoLayer.ProductDtos
+﻿namespace SignalR.WebUI.Dtos.ProductDtos
 {
     public class CreateProductDto
     {

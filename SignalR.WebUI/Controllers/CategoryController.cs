@@ -76,6 +76,7 @@ namespace SignalR.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryDto ucdto)
         {
+            ucdto.CategoryStatus = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(ucdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");

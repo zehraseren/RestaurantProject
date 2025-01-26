@@ -1,0 +1,49 @@
+﻿@model CreateProductDto
+
+@{
+    ViewData["Title"] = "CreateProduct";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Ürün İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Ürün Ekleme Sayfası</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="ProductName"><b>Ürün Adı</b></label>
+                                <input type="text" class="form-control" id="ProductName" asp-for="ProductName">
+                            </div>
+                            <div class="form-group">
+                                <label for="ProductName"><b>Fiyat</b></label>
+                                <input type="number" class="form-control" id="ProductName" asp-for="Price">
+                            </div>
+                            <div class="form-group">
+                                <label for="ProductName"><b>Kategori</b></label>
+                                @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.category, new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                <label for="ProductName"><b>Görsel</b></label>
+                                <input type="text" class="form-control" id="ProductName" asp-for="ImageUrl">
+                            </div>
+                            <div class="form-group">
+                                <label for="ProductName"><b>Ürün Açıklaması</b></label>
+                                <input type="text" class="form-control" id="ProductName" asp-for="Description">
+                            </div>
+                            <div class="d-flex justify-content-end mt-4 none-border">
+                                <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">Ürünü Ekle</button>
+                                <a href="/Product/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

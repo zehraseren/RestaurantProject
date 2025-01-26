@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetProduct(int id)
+        {
+            var value = _productService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpGet("ProductListWithCategory")]
         public IActionResult ProductListWithCategory()
         {
@@ -43,17 +50,18 @@ namespace SignalR.WebApi.Controllers
                 Price = cpdto.Price,
                 ImageUrl = cpdto.ImageUrl,
                 ProductStatus = cpdto.ProductStatus,
+                CategoryId = cpdto.CategoryId,
             };
             _productService.TAdd(product);
-            return Ok("Rezervasyon başarıyla eklendi.");
+            return Ok("Ürün başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var value = _productService.TGetById(id);
             _productService.TDelete(value);
-            return Ok("Rezervasyon başarıyla silindi.");
+            return Ok("Ürün başarıyla silindi.");
         }
 
         [HttpPut]
@@ -67,16 +75,10 @@ namespace SignalR.WebApi.Controllers
                 Price = updto.Price,
                 ImageUrl = updto.ImageUrl,
                 ProductStatus = updto.ProductStatus,
+                CategoryId = updto.CategoryId,
             };
             _productService.TUpdate(product);
-            return Ok("Rezervasyon başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetProduct")]
-        public IActionResult GetProduct(int id)
-        {
-            var value = _productService.TGetById(id);
-            return Ok(value);
+            return Ok("Ürün başarıyla güncellendi.");
         }
     }
 }
