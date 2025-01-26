@@ -1,0 +1,50 @@
+﻿@model UpdateBookingDto
+
+@{
+    ViewData["Title"] = "UpdateBooking";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Rezervasyon İşlemleri</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Rezervasyon Güncelleme Sayfası</div>
+                        </div>
+                        <input type="hidden" asp-for="BookingId" />
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="bookingName"><b>Ad Soyad</b></label>
+                                <input type="text" class="form-control" id="bookingName" asp-for="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><b>Telefon</b></label>
+                                <input type="tel" class="form-control" id="phone" asp-for="Phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="mail"><b>Mail</b></label>
+                                <input type="email" class="form-control" id="mail" asp-for="Mail">
+                            </div>
+                            <div class="form-group">
+                                <label for="personCount"><b>Kişi Sayısı</b></label>
+                                <input type="number" class="form-control" id="personCount" asp-for="PersonCount">
+                            </div>
+                            <div class="form-group">
+                                <label for="date"><b>Tarih</b></label>
+                                <input type="date" class="form-control" id="date" asp-for="Date">
+                            </div>
+                            <div class="d-flex justify-content-end mt-4 none-border">
+                                <button type="submit" class="btn btn-outline-success btn-rounded mr-3">Rezervasyonu Güncelle</button>
+                                <a href="/Booking/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

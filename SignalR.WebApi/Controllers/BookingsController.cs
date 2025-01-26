@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetBooking(int id)
+        {
+            var value = _bookingService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateBooking(CreateBookingDto cbdto)
         {
@@ -41,7 +48,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteBooking(int id)
         {
             var value = _bookingService.TGetById(id);
@@ -63,13 +70,6 @@ namespace SignalR.WebApi.Controllers
             };
             _bookingService.TUpdate(booking);
             return Ok("Rezervasyon başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetBooking")]
-        public IActionResult GetBooking(int id)
-        {
-            var value = _bookingService.TGetById(id);
-            return Ok(value);
         }
     }
 }
