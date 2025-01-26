@@ -21,10 +21,17 @@ namespace SignalR.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult testimonialList()
+        public IActionResult TestimonialList()
         {
             var values = _testimonialService.TGetListAll();
             return Ok(values);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Gettestimonial(int id)
+        {
+            var value = _testimonialService.TGetById(id);
+            return Ok(value);
         }
 
         [HttpPost]
@@ -42,7 +49,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Referans başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult Deletetestimonial(int id)
         {
             var value = _testimonialService.TGetById(id);
@@ -64,13 +71,6 @@ namespace SignalR.WebApi.Controllers
             };
             _testimonialService.TUpdate(testimonial);
             return Ok("Referans başarıyla güncellendi.");
-        }
-
-        [HttpGet("Gettestimonial")]
-        public IActionResult Gettestimonial(int id)
-        {
-            var value = _testimonialService.TGetById(id);
-            return Ok(value);
         }
     }
 }
