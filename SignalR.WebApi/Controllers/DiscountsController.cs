@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetDiscount(int id)
+        {
+            var value = _discountService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateDiscount(CreateDiscountDto cddto)
         {
@@ -41,7 +48,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteDiscount(int id)
         {
             var value = _discountService.TGetById(id);
@@ -63,13 +70,6 @@ namespace SignalR.WebApi.Controllers
             };
             _discountService.TUpdate(discount);
             return Ok("Rezervasyon başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetDiscount")]
-        public IActionResult GetDiscount(int id)
-        {
-            var value = _discountService.TGetById(id);
-            return Ok(value);
         }
     }
 }

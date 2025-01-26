@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\shared\\components\\_layoutsidebarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\shared\\components\\_layoutsidebarcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\discount\\updatediscount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\discount\\updatediscount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\contact\\updatecontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\contact\\updatecontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\discount\\creatediscount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\discount\\creatediscount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\contact\\createcontact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\contact\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\discount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\discount\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Shared\\Components\\_LayoutSidebarComponentPartial\\Default.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGQAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T19:27:01.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\Index.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Contact\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\Index.cshtml",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Contact\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T19:10:20.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UpdateContact.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\UpdateContact.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Contact\\UpdateContact.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\UpdateContact.cshtml",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Contact\\UpdateContact.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAeAAAAAAAAAA==",
+              "Title": "CreateDiscount.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\CreateDiscount.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Discount\\CreateDiscount.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\CreateDiscount.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Discount\\CreateDiscount.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T19:01:46.311Z",
+              "WhenOpened": "2025-01-26T19:52:35.469Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CreateContact.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\CreateContact.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Contact\\CreateContact.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Contact\\CreateContact.cshtml",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Contact\\CreateContact.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Discount\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\Index.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Discount\\Index.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-01-26T19:01:17.949Z",
+              "WhenOpened": "2025-01-26T19:50:52.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateDiscount.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\UpdateDiscount.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Discount\\UpdateDiscount.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Discount\\UpdateDiscount.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Discount\\UpdateDiscount.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-26T19:51:55.581Z",
               "EditorCaption": ""
             }
           ]
