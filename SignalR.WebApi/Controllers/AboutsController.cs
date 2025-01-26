@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetAbout(int id)
+        {
+            var value = _aboutService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateAbout(CreateAboutDto cadto)
         {
@@ -39,7 +46,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Hakkımda kısmı başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteAbout(int id)
         {
             var value = _aboutService.TGetById(id);
@@ -59,13 +66,6 @@ namespace SignalR.WebApi.Controllers
             };
             _aboutService.TUpdate(about);
             return Ok("Hakkımda kısmı başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetAbout")]
-        public IActionResult GetAbout(int id)
-        {
-            var value = _aboutService.TGetById(id);
-            return Ok(value);
         }
     }
 }
