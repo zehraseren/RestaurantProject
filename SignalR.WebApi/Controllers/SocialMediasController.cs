@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetSocialMedia(int id)
+        {
+            var value = _socialMediaService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateSocialMedia(CreateSocialMediaDto csmdto)
         {
@@ -39,7 +46,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Sosyal medya başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);
@@ -59,13 +66,6 @@ namespace SignalR.WebApi.Controllers
             };
             _socialMediaService.TUpdate(SocialMedia);
             return Ok("Sosyal medya başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetSocialMedia")]
-        public IActionResult GetSocialMedia(int id)
-        {
-            var value = _socialMediaService.TGetById(id);
-            return Ok(value);
         }
     }
 }
