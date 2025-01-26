@@ -34,10 +34,10 @@ namespace SignalR.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateBooking(CreateBookingDto cadto)
+        public async Task<IActionResult> CreateBooking(CreateBookingDto cbdto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(cadto);
+            var jsonData = JsonConvert.SerializeObject(cbdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("https://localhost:44354/api/Bookings", content);
             if (response.IsSuccessStatusCode)
@@ -73,10 +73,10 @@ namespace SignalR.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateBooking(UpdateBookingDto uadto)
+        public async Task<IActionResult> UpdateBooking(UpdateBookingDto ubdto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(uadto);
+            var jsonData = JsonConvert.SerializeObject(ubdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PutAsync("https://localhost:44354/api/Bookings", content);
             if (response.IsSuccessStatusCode)

@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetFeature(int id)
+        {
+            var value = _featureService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateFeature(CreateFeatureDto cfdto)
         {
@@ -42,7 +49,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetById(id);
@@ -65,13 +72,6 @@ namespace SignalR.WebApi.Controllers
             };
             _featureService.TUpdate(feature);
             return Ok("Rezervasyon başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetFeature")]
-        public IActionResult GetFeature(int id)
-        {
-            var value = _featureService.TGetById(id);
-            return Ok(value);
         }
     }
 }

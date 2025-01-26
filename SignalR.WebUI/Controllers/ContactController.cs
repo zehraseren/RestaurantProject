@@ -34,10 +34,10 @@ namespace SignalR.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateContact(CreateContactDto cadto)
+        public async Task<IActionResult> CreateContact(CreateContactDto ccdto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(cadto);
+            var jsonData = JsonConvert.SerializeObject(ccdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("https://localhost:44354/api/Contacts", content);
             if (response.IsSuccessStatusCode)
@@ -73,10 +73,10 @@ namespace SignalR.WebUI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> UpdateContact(UpdateContactDto uadto)
+        public async Task<IActionResult> UpdateContact(UpdateContactDto ucdto)
         {
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(uadto);
+            var jsonData = JsonConvert.SerializeObject(ucdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PutAsync("https://localhost:44354/api/Contacts", content);
             if (response.IsSuccessStatusCode)
