@@ -26,6 +26,13 @@ namespace SignalR.WebApi.Controllers
             return Ok(values);
         }
 
+        [HttpGet("{id}")]
+        public IActionResult GetContact(int id)
+        {
+            var value = _contactService.TGetById(id);
+            return Ok(value);
+        }
+
         [HttpPost]
         public IActionResult CreateContact(CreateContactDto ccdto)
         {
@@ -40,7 +47,7 @@ namespace SignalR.WebApi.Controllers
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id)
         {
             var value = _contactService.TGetById(id);
@@ -61,13 +68,6 @@ namespace SignalR.WebApi.Controllers
             };
             _contactService.TUpdate(contact);
             return Ok("Rezervasyon başarıyla güncellendi.");
-        }
-
-        [HttpGet("GetContact")]
-        public IActionResult GetContact(int id)
-        {
-            var value = _contactService.TGetById(id);
-            return Ok(value);
         }
     }
 }
