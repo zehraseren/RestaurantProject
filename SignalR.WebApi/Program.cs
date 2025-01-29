@@ -1,4 +1,5 @@
 using System.Reflection;
+using SignalR.WebApi.Hubs;
 using SignalR.BusinessLayer.Container;
 using SignalR.DataAccessLayer.Concrete;
 
@@ -19,6 +20,7 @@ builder.Services.AddCors(opt =>
         .AllowCredentials();
     });
 });
+builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -42,5 +44,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<SignalRHub>("/SignalRHub");
 
 app.Run();
