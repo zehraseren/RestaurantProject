@@ -20,10 +20,10 @@
 
             @await Component.InvokeAsync("_LayoutFooterComponentPartial")
 
-            @await Component.InvokeAsync("_LayoutScriptComponentPartial")
-
         </div>
     </div>
+
+    @await Component.InvokeAsync("_LayoutScriptComponentPartial")
 
     @RenderSection("Scripts", required: false)
 

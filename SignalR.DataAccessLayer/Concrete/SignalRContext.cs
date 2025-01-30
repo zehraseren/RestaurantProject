@@ -19,12 +19,26 @@ namespace SignalR.DataAccessLayer.Concrete
         public DbSet<Product> Products { get; set; }
         public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>()
                 .Property(p => p.Price)
                 .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Order>()
+                .Property(p => p.TotalPrice)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<OrderDetail>()
+               .Property(p => p.UnitPrice)
+               .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<OrderDetail>()
+               .Property(p => p.TotalPrice)
+               .HasColumnType("decimal(18,2)");
 
             base.OnModelCreating(modelBuilder);
         }
