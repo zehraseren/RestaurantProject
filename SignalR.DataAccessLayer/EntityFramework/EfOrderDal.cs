@@ -23,6 +23,14 @@ namespace SignalR.DataAccessLayer.EntityFramework
             return context.Orders.Where(x => x.Description == "Müşteri Masada").Count();
         }
 
+        public decimal TotalDailyEarnings()
+        {
+            using var context = new SignalRContext();
+            return context.Orders
+                .Where(x => x.OrderDate.Date == DateTime.Today)
+                .Sum(x => x.TotalPrice);
+        }
+
         public int TotalOrderCount()
         {
             using var context = new SignalRContext();

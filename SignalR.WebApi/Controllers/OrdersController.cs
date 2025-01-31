@@ -29,5 +29,11 @@ namespace SignalR.WebApi.Controllers
         {
             return Ok(_orderService.TLastOrderTotalPrice());
         }
+
+        [HttpGet("TotalDailyEarnings")]
+        public IActionResult TotalDailyEarnings()
+        {
+            return Ok(_orderService.TTotalDailyEarnings());
+        }
     }
 }
