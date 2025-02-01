@@ -24,10 +24,10 @@
 
                                 connection.start().then(() => {
                                     $("#connstatus").text(connection.state);
-                                    connection.invoke("SendCategoryCount");
+                                    connection.invoke("TakeDashboardCounts");
                                 }).catch((err) => { console.log(err) });
 
-                                connection.on("ReceiverCategoryCount", (value) => {
+                                connection.on("ReceiveDashboardCounts", (value) => {
                                     $("#categorycount").text(value);
                                 });
                             })
