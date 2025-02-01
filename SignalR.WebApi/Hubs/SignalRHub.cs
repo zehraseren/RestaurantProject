@@ -2,6 +2,7 @@
 using SignalR.BusinessLayer.Abstract;
 using SignalR.BusinessLayer.Helpers;
 using SignalR.DtoLayer.DashboardCountDtos;
+using SignalR.DtoLayer.GetProgressPercentageDtos;
 
 namespace SignalR.WebApi.Hubs
 {
@@ -45,6 +46,18 @@ namespace SignalR.WebApi.Hubs
             };
 
             await Clients.All.SendAsync("ReceiveDashboardCounts", dashboardCounts);
+        }
+
+        public async Task GetProgressPercentage()
+        {
+            var getProgressPercentageDto = new GetProgressPercentageDto
+            {
+                TotalMoneyCaseAmount = _moneyCaseService.TTotalMoneyCaseAmount().ToTurkishLira(),
+                TotalActiveOrderCount = _orderService.TTotalActiveOrderCount(),
+                MenuTableCount = _menuTableService.TMenuTableCount(),
+            };
+
+            await Clients.All.SendAsync("ReceiveProgressPercentage", getProgressPercentageDto);
         }
     }
 }

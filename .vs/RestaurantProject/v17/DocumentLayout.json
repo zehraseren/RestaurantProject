@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\progressbar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\progressbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\progressbarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webapi\\hubs\\signalrhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|solutionrelative:signalr.webapi\\hubs\\signalrhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.dtolayer\\getprogresspercentagedtos\\getprogresspercentagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{459557F9-872E-4B5B-BAC5-5A6740951F5B}|SignalR.DtoLayer\\SignalR.DtoLayer.csproj|solutionrelative:signalr.dtolayer\\getprogresspercentagedtos\\getprogresspercentagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +34,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml*",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAG0BAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-01T04:58:41.338Z",
+              "WhenOpened": "2025-02-01T05:32:06.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProgressBarController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\ProgressBarController.cs",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\ProgressBarController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\ProgressBarController.cs",
-              "RelativeToolTip": "SignalR.WebUI\\Controllers\\ProgressBarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "GetProgressPercentageDto.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\GetProgressPercentageDtos\\GetProgressPercentageDto.cs",
+              "RelativeDocumentMoniker": "SignalR.DtoLayer\\GetProgressPercentageDtos\\GetProgressPercentageDto.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.DtoLayer\\GetProgressPercentageDtos\\GetProgressPercentageDto.cs",
+              "RelativeToolTip": "SignalR.DtoLayer\\GetProgressPercentageDtos\\GetProgressPercentageDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T04:58:03.401Z",
+              "WhenOpened": "2025-02-01T05:30:25.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SignalRHub.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "RelativeDocumentMoniker": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "RelativeToolTip": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwDMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T05:09:54.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\ProgressBar\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-01T04:58:41.338Z",
               "EditorCaption": ""
             }
           ]
