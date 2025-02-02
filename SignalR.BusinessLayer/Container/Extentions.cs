@@ -48,6 +48,9 @@ namespace SignalR.BusinessLayer.Container
 
             services.AddScoped<IMenuTableService, MenuTableManager>();
             services.AddScoped<IMenuTableDal, EfMenuTableDal>();
+
+            services.AddScoped<ISliderService, SliderManager>();
+            services.AddScoped<ISliderDal, EfSliderDal>();
         }
     }
 }
