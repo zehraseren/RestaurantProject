@@ -51,6 +51,9 @@ namespace SignalR.BusinessLayer.Container
 
             services.AddScoped<ISliderService, SliderManager>();
             services.AddScoped<ISliderDal, EfSliderDal>();
+
+            services.AddScoped<IBasketService, BasketManager>();
+            services.AddScoped<IBasketDal, EfBasketDal>();
         }
     }
 }

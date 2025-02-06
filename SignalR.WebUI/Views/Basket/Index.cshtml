@@ -1,0 +1,179 @@
+﻿@model List<ResultBasketDto>
+
+@{
+    Layout = null;
+    int count = 0;
+    decimal basketTotalPrice = 0;
+    decimal basketTotalPriceWithTax = 0;
+    decimal tax = 0;
+    decimal totalPrice = 0;
+}
+
+<!DOCTYPE html>
+<html>
+
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body class="sub_page">
+
+    <div class="hero_area">
+        @await Component.InvokeAsync("_UILayoutNavbarComponentPartial")
+    </div>
+
+    <br />
+    <br />
+
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-12">
+                <nav class="breadcrumb bg-dark mb-30">
+                    <a class="breadcrumb-item text-white" href="/Default/Index/">Ana Sayfa</a>
+                    <a class="breadcrumb-item text-white" href="/Menu/Index/">Menü</a>
+                    <span class="breadcrumb-item active">Sepetiniz</span>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-light table-borderless table-hover text-center mb-0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>#</th>
+                            <th>Ürün Adı</th>
+                            <th>Adet</th>
+                            <th>Fiyat</th>
+                            <th>Toplam</th>
+                            <th>Sil</th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        basketTotalPrice = Model.Sum(x => x.Price);
+                        tax = basketTotalPrice / 100 * 10;
+                        basketTotalPriceWithTax = basketTotalPrice + tax;
+                        totalPrice = item.Price + item.Count;
+                        count++;
+                        <tbody class="align-middle">
+                            <tr>
+                                <td class="align-middle">@count</td>
+                                <td class="align-middle">@item.ProductName</td>
+                                <td class="align-middle">@item.Count</td>
+                                <td class="align-middle">@item.Price</td>
+                                <td class="align-middle">@item.TotalPrice.ToString("0.00")</td>
+                                <td class="align-middle btn-delete">
+                                    <button data-basketid="@item.BasketId" onclick="deleteProductInBasket(@item.BasketId, '@item.ProductName')" id="btndeletedbasketid" class="btn btn-sm btn-outline-danger"><i class="fa fa-times"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </div>
+            <div class="col-lg-4">
+                <form>
+                    <div class="input-group">
+                        <input type="text" id="couponcode" class="form-control border-1 p-4 mr-2" placeholder="Kupon Kodunuz" />
+                        <div>
+                            <button style="height:48px; padding-top:11px;" class="btn btn-outline-warning" id="btncouponcode">Kuponu Uygula</button>
+                        </div>
+                    </div>
+                </form>
+                <br />
+                <div class="bg-light p-4 mb-4 shadow-sm rounded-1">
+                    <h5 class="section-title position-relative mb-4">Sepet Özeti</h5>
+                    <div class="border-bottom pb-3 px-2" id="container">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6 class="mb-0">Toplam Tutar</h6>
+                            <h6 class="mb-0"><span id="totalprice">@basketTotalPrice</span>₺</h6>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h6 class="font-weight-medium mb-0">KDV Oranı</h6>
+                            <h6 class="font-weight-medium mb-0" id="tax">@tax ₺</h6>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="pt-2">
+                        <div class="d-flex justify-content-between mt-2">
+                            <h5>Toplam Tutar</h5>
+                            <h6><span id="totalpricewithtax">@basketTotalPriceWithTax</span>₺</h6>
+                        </div>
+                        <br />
+                        <button id="btnchecked" class="btn btn-outline-warning btn-block font-weight-bold my-2">Siparişi Tamamla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function deleteProductInBasket(basketId, productName) {
+            const result = await Swal.fire({
+                title: productName + ' ürününü silmek istediğinizden emin misiniz?',
+                text: "Bu işlem işlem geri alınamaz!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Evet, sil!',
+                cancelButtonText: 'Hayır, iptal et!'
+            });
+            if(result.isConfirmed){
+                try {
+                    const response = await fetch(`https://localhost:44354/api/Baskets/${basketId}`, {
+                        method: 'DELETE'
+                    });
+                    if (response.ok) {
+                        Swal.fire(
+                            'Silindi!',
+                            'Seçilen ürün silindi.',
+                            'success'
+                        ).then(() => {
+                            const row = document.querySelector(`button[data-basketid="${basketId}"]`).closest('tr');
+                            row.remove();
+                            updateBasketSummary();
+                        });
+                    } else {
+                        Swal.fire(
+                            'Hata!',
+                            'Böyle bir ürün yok.',
+                            'error'
+                        );
+                    }
+                }
+                catch (error) {
+                    console.error('Silme işlemi sırasında bir hata oluştu:', error);
+                    Swal.fire(
+                        'Hata!',
+                        'Bir hata oluştu. Lütfen daha sonra tekrar deneyin.',
+                        'error'
+                    );
+                }
+            }
+        }
+
+        function updateBasketSummary() {
+            let basketTotalPrice = 0;
+            document.querySelectorAll('.table tbody tr').forEach(row => {
+                const price = parseFloat(row.querySelector('td:nth-child(4)').textContent.replace('₺', ''));
+                basketTotalPrice += price;
+            });
+
+            const tipPrice = Math.round(basketTotalPrice * 0.04 * 100) / 100;
+            const totalSumPrice = tipPrice + basketTotalPrice;
+            document.getElementById('totalPrice').textContent = basketTotalPrice.toFixed(2) + '₺';
+            document.getElementById('discountPrice').textContent = tipPrice.toFixed(2) + '₺';
+            document.getElementById('totalPriceSum').textContent = totalSumPrice.toFixed(2) + '₺';
+        }
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @await Component.InvokeAsync("_UILayoutFooterComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
+
+</body>
+
+</html>

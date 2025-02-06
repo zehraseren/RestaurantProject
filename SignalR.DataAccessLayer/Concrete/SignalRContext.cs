@@ -24,6 +24,7 @@ namespace SignalR.DataAccessLayer.Concrete
         public DbSet<MoneyCase> MoneyCases { get; set; }
         public DbSet<MenuTable> MenuTables { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Basket> Baskets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -47,6 +48,17 @@ namespace SignalR.DataAccessLayer.Concrete
                .Property(p => p.TotalAmount)
                .HasColumnType("decimal(18,2)");
 
+            modelBuilder.Entity<Basket>()
+                .Property(p => p.Price)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Basket>()
+                .Property(p => p.Count)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<Basket>()
+                .Property(p => p.TotalPrice)
+                .HasColumnType("decimal(18,2)");
 
             base.OnModelCreating(modelBuilder);
         }
