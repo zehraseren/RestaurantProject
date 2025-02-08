@@ -85,5 +85,65 @@ namespace SignalR.WebUI.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> BookingStatusApproved(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            await client.GetAsync($"https://localhost:44354/api/Bookings/BookingStatusApproved/{id}");
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> BookingStatusCancelled(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            await client.GetAsync($"https://localhost:44354/api/Bookings/BookingStatusCancelled/{id}");
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> BookingStatusApprovedCount()
+        {
+            var client = _httpClientFactory.CreateClient();
+            await client.GetAsync("https://localhost:44354/api/Bookings/BookingStatusApprovedCount");
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> GetBookingStatusApproved(ResultBookingStatusApprovedDto rbsadto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:44354/api/Bookings/GetBookingStatusAprroved");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusApprovedDto>>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> GetBookingStatusReceived(ResultBookingStatusApprovedDto rbsadto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:44354/api/Bookings/GetBookingStatusReceived");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusApprovedDto>>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+
+        public async Task<IActionResult> GetBookingStatusCancelled(ResultBookingStatusApprovedDto rbsadto)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync("https://localhost:44354/api/Bookings/GetBookingStatusCancelled");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusApprovedDto>>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
     }
 }

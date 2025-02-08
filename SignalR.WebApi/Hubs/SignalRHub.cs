@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.BusinessLayer.Helpers;
+using SignalR.DtoLayer.BookingDtos;
 using SignalR.DtoLayer.DashboardCountDtos;
 using SignalR.DtoLayer.GetProgressPercentageDtos;
 
@@ -10,14 +11,16 @@ namespace SignalR.WebApi.Hubs
     {
         private readonly IOrderService _orderService;
         private readonly IProductService _productService;
+        private readonly IBookingService _bookingService;
         private readonly ICategoryService _categoryService;
         private readonly IMenuTableService _menuTableService;
         private readonly IMoneyCaseService _moneyCaseService;
 
-        public SignalRHub(ICategoryService categoryService, IProductService productService, IMenuTableService menuTableService, IOrderService orderService, IMoneyCaseService moneyCaseService)
+        public SignalRHub(ICategoryService categoryService, IProductService productService, IBookingService bookingService, IMenuTableService menuTableService, IOrderService orderService, IMoneyCaseService moneyCaseService)
         {
             _orderService = orderService;
             _productService = productService;
+            _bookingService = bookingService;
             _categoryService = categoryService;
             _menuTableService = menuTableService;
             _moneyCaseService = moneyCaseService;
@@ -58,6 +61,13 @@ namespace SignalR.WebApi.Hubs
             };
 
             await Clients.All.SendAsync("ReceiveProgressPercentage", getProgressPercentageDto);
+        }
+
+        public async Task GetBookingList()
+        {
+            var getBookingList = _bookingService.TGetListAll();
+
+            await Clients.All.SendAsync("ReceiveBookingList", getBookingList);
         }
     }
 }

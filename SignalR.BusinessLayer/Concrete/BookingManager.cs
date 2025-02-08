@@ -18,9 +18,39 @@ namespace SignalR.BusinessLayer.Concrete
             _bookingDal.Add(entity);
         }
 
+        public void TBookingStatusApproved(int id)
+        {
+            _bookingDal.BookingStatusApproved(id);
+        }
+
+        public int TBookingStatusApprovedCount()
+        {
+            return _bookingDal.BookingStatusApprovedCount();
+        }
+
+        public void TBookingStatusCanceled(int id)
+        {
+            _bookingDal.BookingStatusCanceled(id);
+        }
+
         public void TDelete(Booking entity)
         {
             _bookingDal.Delete(entity);
+        }
+
+        public List<Booking> TGetBookingStatusApproved()
+        {
+            return _bookingDal.GetBookingStatusApproved();
+        }
+
+        public List<Booking> TGetBookingStatusCanceled()
+        {
+            return _bookingDal.GetBookingStatusCanceled();
+        }
+
+        public List<Booking> TGetBookingStatusReceived()
+        {
+            return _bookingDal.GetBookingStatusReceived();
         }
 
         public Booking TGetById(int id)

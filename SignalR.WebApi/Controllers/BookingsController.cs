@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SignalR.DtoLayer.BookingDtos;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
+using SignalR.DataAccessLayer.Concrete;
 
 namespace SignalR.WebApi.Controllers
 {
@@ -70,6 +71,50 @@ namespace SignalR.WebApi.Controllers
             };
             _bookingService.TUpdate(booking);
             return Ok("Rezervasyon başarıyla güncellendi.");
+        }
+
+        [HttpGet("BookingStatusApproved/{id}")]
+        public IActionResult BookingStatusApproved(int id)
+        {
+            _bookingService.TBookingStatusApproved(id);
+            return Ok("Rezervasyon durumu değiştirildi.");
+        }
+
+        [HttpGet("BookingStatusCancelled/{id}")]
+        public IActionResult BookingStatusCancelled(int id)
+        {
+            _bookingService.TBookingStatusCanceled(id);
+            return Ok("Rezervasyon durumu değiştirildi.");
+        }
+
+        [HttpGet("BookingStatusApprovedCount")]
+        public IActionResult BookingStatusApprovedCount()
+        {
+            return Ok(_bookingService.TBookingStatusApprovedCount());
+        }
+
+        [HttpGet("GetBookingStatusAprroved")]
+        public IActionResult GetBookingStatusAprroved()
+        {
+            var context = new SignalRContext();
+            var values = context.Bookings.Where(x => x.Status == "Rezervasyon Onaylandı").ToList();
+            return Ok(values);
+        }
+
+        [HttpGet("GetBookingStatusCancelled")]
+        public IActionResult GetBookingStatusCancelled()
+        {
+            var context = new SignalRContext();
+            var values = context.Bookings.Where(x => x.Status == "Rezervasyon İptal Edildi").ToList();
+            return Ok(values);
+        }
+
+        [HttpGet("GetBookingStatusReceived")]
+        public IActionResult GetBookingStatusReceived()
+        {
+            var context = new SignalRContext();
+            var values = context.Bookings.Where(x => x.Status == "Rezervasyon Alındı").ToList();
+            return Ok(values);
         }
     }
 }
