@@ -54,6 +54,9 @@ namespace SignalR.BusinessLayer.Container
 
             services.AddScoped<IBasketService, BasketManager>();
             services.AddScoped<IBasketDal, EfBasketDal>();
+
+            services.AddScoped<INotificationService, NotificationManager>();
+            services.AddScoped<INotificationDal, EfNotificationDal>();
         }
     }
 }

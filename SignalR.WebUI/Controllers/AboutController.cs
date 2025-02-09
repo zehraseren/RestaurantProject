@@ -72,7 +72,7 @@ namespace SignalR.WebUI.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPut]
         public async Task<IActionResult> UpdateAbout(UpdateAboutDto uadto)
         {
             var client = _httpClientFactory.CreateClient();

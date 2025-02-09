@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
-using SignalR.BusinessLayer.Abstract;
 using SignalR.BusinessLayer.Helpers;
-using SignalR.DtoLayer.BookingDtos;
+using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.DashboardCountDtos;
 using SignalR.DtoLayer.GetProgressPercentageDtos;
 
@@ -15,8 +14,9 @@ namespace SignalR.WebApi.Hubs
         private readonly ICategoryService _categoryService;
         private readonly IMenuTableService _menuTableService;
         private readonly IMoneyCaseService _moneyCaseService;
+        private readonly INotificationService _notificationService;
 
-        public SignalRHub(ICategoryService categoryService, IProductService productService, IBookingService bookingService, IMenuTableService menuTableService, IOrderService orderService, IMoneyCaseService moneyCaseService)
+        public SignalRHub(ICategoryService categoryService, IProductService productService, IBookingService bookingService, IMenuTableService menuTableService, IOrderService orderService, IMoneyCaseService moneyCaseService, INotificationService notificationService)
         {
             _orderService = orderService;
             _productService = productService;
@@ -24,6 +24,7 @@ namespace SignalR.WebApi.Hubs
             _categoryService = categoryService;
             _menuTableService = menuTableService;
             _moneyCaseService = moneyCaseService;
+            _notificationService = notificationService;
         }
 
         public async Task TakeDashboardCounts()
@@ -68,6 +69,15 @@ namespace SignalR.WebApi.Hubs
             var getBookingList = _bookingService.TGetListAll();
 
             await Clients.All.SendAsync("ReceiveBookingList", getBookingList);
+        }
+
+        public async Task SendNotification()
+        {
+            var value = _notificationService.TNotificationCountByStatusFalse();
+            await Clients.All.SendAsync("ReceiveNotificationCountByFalse", value);
+
+            var notificationListByFalse = _notificationService.TGetAllNotificationsByFalse();
+            await Clients.All.SendAsync("ReceiveNotificationListByFalse", notificationListByFalse);
         }
     }
 }
