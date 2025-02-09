@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\menutable\\tablelistbystatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\menutable\\tablelistbystatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\statistic\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\menutablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\menutablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webapi\\hubs\\signalrhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD48A081-2C92-4A14-9C27-557CF8597DA4}|SignalR.WebApi\\SignalR.WebApi.csproj|solutionrelative:signalr.webapi\\hubs\\signalrhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,51 +26,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "chat.js",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\wwwroot\\js\\chat.js",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\wwwroot\\js\\chat.js",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\wwwroot\\js\\chat.js",
+              "RelativeToolTip": "SignalR.WebUI\\wwwroot\\js\\chat.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-09T19:05:23.093Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MenuTableController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MenuTableController.cs",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\MenuTableController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MenuTableController.cs",
-              "RelativeToolTip": "SignalR.WebUI\\Controllers\\MenuTableController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T16:10:41.058Z",
-              "IsPinned": true,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Message\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\Index.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Message\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-09T18:09:50.401Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Statistic\\Index.cshtml",
-              "ViewState": "AgIAACoAAAAAAAAAAAD4v3YAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-09T17:31:23.369Z",
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\MessageController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "SignalR.WebUI\\Controllers\\MessageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T18:09:01.526Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TableListByStatus.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\MenuTable\\TableListByStatus.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\MenuTable\\TableListByStatus.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\MenuTable\\TableListByStatus.cshtml*",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\MenuTable\\TableListByStatus.cshtml*",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwDYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-09T17:15:39.689Z",
+              "DocumentIndex": 3,
+              "Title": "SignalRHub.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "RelativeDocumentMoniker": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "RelativeToolTip": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-09T18:04:48.524Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
