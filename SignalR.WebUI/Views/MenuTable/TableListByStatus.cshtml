@@ -1,0 +1,69 @@
+﻿@model List<ResultMenuTableDto>
+
+@{
+    ViewData["Title"] = "TableListByStatus";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/microsoft/signalr/dist/browser/signalr.min.js"></script>
+
+<div class="content">
+    <div class="container-fluid">
+
+        <script type="text/javascript">
+            $(document).ready(() => {
+                var connection = new signalR.HubConnectionBuilder()
+                .withUrl("https://localhost:44354/SignalRHub")
+                .build();
+
+                $("#connstatus").text(connection.state);
+
+                connection.start().then(() => {
+                    $("#connstatus").text(connection.state);
+
+                    setInterval(() => {
+                        connection.invoke("GetMenuTableStatus");
+                    }, 2000);
+
+                }).catch((err) => { console.log(err) });
+
+                connection.on("ReceiveMenuTableStatus", (value) => {
+
+                    let tablehtml = `<div class="row">`;
+                    $.each(value, (index, item) => {
+                        tablehtml +=
+                        `<div class="col-md-3">
+                            <div class="card card-stats ${item.status == true ? "card-success" : "card-danger"}">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="icon-big text-center">
+                                                <i class="${item.status == true ? "la la-chevron-circle-down" : "la la-ban"}"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-7 d-flex align-item-center">
+                                            <div class="numbers">
+                                                <p class="card-category">${item.name}</p>
+                                                <h4 class="card-title">${item.status == true ? "Masa Dolu": "Masa Boş"}</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`
+                    });
+                    tablehtml+="</div>"
+
+                    $("#statuslist").html(tablehtml);
+
+                });
+            })
+        </script>
+
+        <h4 class="page-title">Anlık Masa Durumları Sayfası</h4>
+        <div id="statuslist"></div>
+    </div>
+</div>

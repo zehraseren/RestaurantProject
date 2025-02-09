@@ -71,5 +71,19 @@ namespace SignalR.WebApi.Controllers
             _menuTableService.TUpdate(menuTable);
             return Ok("Masa başarıyla güncellendi.");
         }
+
+        [HttpGet("ChangeMenuTableStatusToTrue")]
+        public IActionResult ChangeMenuTableStatusToTrue(int id)
+        {
+            _menuTableService.TChangeMenuTableStatusToTrue(id);
+            return Ok("İşlem başarılı.");
+        }
+
+        [HttpGet("ChangeMenuTableStatusToFalse")]
+        public IActionResult ChangeMenuTableStatusToFalse(int id)
+        {
+            _menuTableService.TChangeMenuTableStatusToFalse(id);
+            return Ok("İşlem başarılı.");
+        }
     }
 }
