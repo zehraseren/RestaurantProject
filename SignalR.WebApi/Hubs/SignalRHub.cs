@@ -16,6 +16,8 @@ namespace SignalR.WebApi.Hubs
         private readonly IMoneyCaseService _moneyCaseService;
         private readonly INotificationService _notificationService;
 
+        public static int clientCount { get; set; } = 0;
+
         public SignalRHub(ICategoryService categoryService, IProductService productService, IBookingService bookingService, IMenuTableService menuTableService, IOrderService orderService, IMoneyCaseService moneyCaseService, INotificationService notificationService)
         {
             _orderService = orderService;
@@ -89,6 +91,20 @@ namespace SignalR.WebApi.Hubs
         public async Task SendMessage(string user, string message)
         {
             await Clients.All.SendAsync("ReceiveMessage", user, message);
+        }
+
+        public override async Task OnConnectedAsync()
+        {
+            clientCount++;
+            await Clients.All.SendAsync("ReceiveClientCount", clientCount);
+            await base.OnConnectedAsync();
+        }
+
+        public override async Task OnDisconnectedAsync(Exception? exception)
+        {
+            clientCount--;
+            await Clients.All.SendAsync("ReceiveClientCount", clientCount);
+            await base.OnDisconnectedAsync(exception);
         }
     }
 }

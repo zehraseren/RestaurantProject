@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\wwwroot\\js\\chat.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\message\\clientusercount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\message\\clientusercount.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 392,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,54 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "chat.js",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\wwwroot\\js\\chat.js",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\wwwroot\\js\\chat.js",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\wwwroot\\js\\chat.js",
-              "RelativeToolTip": "SignalR.WebUI\\wwwroot\\js\\chat.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-09T19:05:23.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\Index.cshtml",
               "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Message\\Index.cshtml",
               "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\Index.cshtml",
               "RelativeToolTip": "SignalR.WebUI\\Views\\Message\\Index.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-09T18:09:50.401Z",
+              "WhenOpened": "2025-02-11T20:51:18.836Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MessageController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MessageController.cs",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\MessageController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\MessageController.cs",
-              "RelativeToolTip": "SignalR.WebUI\\Controllers\\MessageController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T18:09:01.526Z",
+              "DocumentIndex": 0,
+              "Title": "ClientUserCount.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\ClientUserCount.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Message\\ClientUserCount.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Message\\ClientUserCount.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\Message\\ClientUserCount.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAADwvzoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-11T20:48:23.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "SignalRHub.cs",
               "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
               "RelativeDocumentMoniker": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
               "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebApi\\Hubs\\SignalRHub.cs",
               "RelativeToolTip": "SignalR.WebApi\\Hubs\\SignalRHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwGkAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-09T18:04:48.524Z",
+              "WhenOpened": "2025-02-09T19:32:29.565Z",
               "EditorCaption": ""
             }
           ]
