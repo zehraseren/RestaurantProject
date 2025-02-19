@@ -42,6 +42,9 @@ namespace SignalR.WebApi.Controllers
                 PhoneNumber = ccdto.PhoneNumber,
                 Mail = ccdto.Mail,
                 FooterDescription = ccdto.FooterDescription,
+                OpenDays = ccdto.OpenDays,
+                OpenDaysDescription = ccdto.OpenDaysDescription,
+                OpenHours = ccdto.OpenHours,
             };
             _contactService.TAdd(contact);
             return Ok("Rezervasyon başarıyla eklendi.");
@@ -65,6 +68,9 @@ namespace SignalR.WebApi.Controllers
                 PhoneNumber = ucdto.PhoneNumber,
                 Mail = ucdto.Mail,
                 FooterDescription = ucdto.FooterDescription,
+                OpenDays = ucdto.OpenDays,
+                OpenDaysDescription = ucdto.OpenDaysDescription,
+                OpenHours = ucdto.OpenHours,
             };
             _contactService.TUpdate(contact);
             return Ok("Rezervasyon başarıyla güncellendi.");

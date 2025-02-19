@@ -21,6 +21,12 @@
                                 <label for="name"><b>Masa Adı</b></label>
                                 <input type="text" class="form-control" id="name" asp-for="Name">
                             </div>
+                            <div class="form-group">
+                                <label for="status"><b>Masa Durumu</b></label>
+                                <select asp-for="Status" asp-items="ViewBag.StatusList" class="form-control">
+                                    <option>Lütfen bir durum seçin</option>
+                                </select>
+                            </div>
                             <div class="d-flex justify-content-end mt-4 none-border">
                                 <button type="submit" class="btn btn-outline-success btn-rounded mr-3">Masayı Güncelle</button>
                                 <a href="/MenuTable/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>

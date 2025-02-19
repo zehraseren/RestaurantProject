@@ -16,7 +16,7 @@ namespace SignalR.WebUI.ViewComponents.DefaultComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var response = await client.GetAsync("https://localhost:44354/api/Discounts");
+            var response = await client.GetAsync("https://localhost:44354/api/Discounts/GetDiscountListByStatusActive");
             var jsonData = await response.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultDiscountDto>>(jsonData);
             return View(values);

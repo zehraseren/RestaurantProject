@@ -1,4 +1,6 @@
-﻿namespace SignalR.WebUI.Dtos.DiscountDtos
+﻿using SignalR.CommonLayer.Enums;
+
+namespace SignalR.WebUI.Dtos.DiscountDtos
 {
     public class CreateDiscountDto
     {
@@ -6,6 +8,6 @@
         public string Amount { get; set; }
         public string Description { get; set; }
         public string ImageUrl { get; set; }
-        public bool Status { get; set; }
+        public AvailableStatus Status { get; set; }
     }
 }

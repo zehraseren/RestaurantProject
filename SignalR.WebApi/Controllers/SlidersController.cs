@@ -46,7 +46,7 @@ namespace SignalR.WebApi.Controllers
                 Description3 = csdto.Description3,
             };
             _sliderService.TAdd(Slider);
-            return Ok("Slayt kısmı başarıyla eklendi.");
+            return Ok("Öne çıkan kısmı başarıyla eklendi.");
         }
 
         [HttpDelete("{id}")]
@@ -54,7 +54,7 @@ namespace SignalR.WebApi.Controllers
         {
             var value = _sliderService.TGetById(id);
             _sliderService.TDelete(value);
-            return Ok("Slayt kısmı başarıyla silindi.");
+            return Ok("Öne çıkan kısmı başarıyla silindi.");
         }
 
         [HttpPut]
@@ -71,7 +71,7 @@ namespace SignalR.WebApi.Controllers
                 Description3 = usdto.Description3,
             };
             _sliderService.TUpdate(Slider);
-            return Ok("Slayt kısmı başarıyla güncellendi.");
+            return Ok("Öne çıkan kısmı başarıyla güncellendi.");
         }
     }
 

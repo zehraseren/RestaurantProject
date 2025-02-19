@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using SignalR.DtoLayer.BookingDtos;
+using Microsoft.AspNetCore.SignalR;
 using SignalR.BusinessLayer.Helpers;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.DashboardCountDtos;
@@ -69,8 +70,18 @@ namespace SignalR.WebApi.Hubs
         public async Task GetBookingList()
         {
             var getBookingList = _bookingService.TGetListAll();
-
             await Clients.All.SendAsync("ReceiveBookingList", getBookingList);
+        }
+
+        public async Task GetBookingStatusList()
+        {
+            var approvedBookings = _bookingService.TGetBookingStatusApproved();
+            var receivedBookings = _bookingService.TGetBookingStatusReceived();
+            var cancelledBookings = _bookingService.TGetBookingStatusCanceled();
+
+            await Clients.All.SendAsync("ReceiveApprovedBookings", approvedBookings);
+            await Clients.All.SendAsync("ReceiveReceivedBookings", receivedBookings);
+            await Clients.All.SendAsync("ReceiveCancelledBookings", cancelledBookings);
         }
 
         public async Task SendNotification()

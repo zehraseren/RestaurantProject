@@ -34,20 +34,21 @@
 
                     let tablehtml = `<div class="row">`;
                     $.each(value, (index, item) => {
+                        let {cardClass, iconClass, statusText } = getMenuTableStatusInfo(item.status);
                         tablehtml +=
                         `<div class="col-md-3">
-                            <div class="card card-stats ${item.status == true ? "card-success" : "card-danger"}">
+                            <div class="card card-stats ${cardClass}">
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="col-5">
                                             <div class="icon-big text-center">
-                                                <i class="${item.status == true ? "la la-chevron-circle-down" : "la la-ban"}"></i>
+                                                <i class="${iconClass}"></i>
                                             </div>
                                         </div>
                                         <div class="col-7 d-flex align-item-center">
                                             <div class="numbers">
                                                 <p class="card-category">${item.name}</p>
-                                                <h4 class="card-title">${item.status == true ? "Masa Dolu": "Masa Boş"}</h4>
+                                                <h4 class="card-title">${statusText}</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +61,30 @@
                     $("#statuslist").html(tablehtml);
 
                 });
-            })
+
+                function getMenuTableStatusInfo(status) {
+                    switch(status) {
+                        case 0:
+                            return {
+                                cardClass: "card-danger",
+                                iconClass: "la la-ban",
+                                statusText: "Masa Boş"
+                            };
+                        case 1:
+                             return {
+                                cardClass: "card-success",
+                                iconClass: "la la-chevron-circle-down",
+                                statusText: "Masa Dolu"
+                            };
+                        default:
+                             return {
+                                cardClass: "card-warning",
+                                iconClass: "la la-question-circle",
+                                statusText: "Bilinmiyor"
+                            };
+                    }
+                }
+            });
         </script>
 
         <h4 class="page-title">Anlık Masa Durumları Sayfası</h4>

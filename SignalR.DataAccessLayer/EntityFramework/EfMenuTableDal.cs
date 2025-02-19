@@ -1,4 +1,5 @@
-﻿using SignalR.EntityLayer.Concrete;
+﻿using SignalR.CommonLayer.Enums;
+using SignalR.EntityLayer.Concrete;
 using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
 using SignalR.DataAccessLayer.Repositories;
@@ -15,7 +16,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
         {
             using var context = new SignalRContext();
             var value = context.MenuTables.Where(x => x.MenuTableId == id).FirstOrDefault();
-            value.Status = false;
+            value.Status = MenuTableStatus.Empty;
             context.SaveChanges();
         }
 
@@ -23,7 +24,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
         {
             using var context = new SignalRContext();
             var value = context.MenuTables.Where(x => x.MenuTableId == id).FirstOrDefault();
-            value.Status = true;
+            value.Status = MenuTableStatus.Full;
             context.SaveChanges();
         }
 

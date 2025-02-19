@@ -20,6 +20,12 @@
                                 <label for="categoryName"><b>Kategori Adı</b></label>
                                 <input type="text" class="form-control" id="categoryName" asp-for="CategoryName">
                             </div>
+                            <div class="form-group">
+                                <label for="status"><b>Durum</b></label>
+                                <select asp-for="CategoryStatus" asp-items="ViewBag.StatusList" class="form-control">
+                                    <option>Lütfen bir durum seçin</option>
+                                </select>
+                            </div>
                             <div class="d-flex justify-content-end mt-4 none-border">
                                 <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">Kategoriyi Ekle</button>
                                 <a href="/Category/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>

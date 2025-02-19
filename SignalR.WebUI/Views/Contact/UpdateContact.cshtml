@@ -33,8 +33,20 @@
                                 <label for="description"><b>Açıklama</b></label>
                                 <textarea rows="5" class="form-control" id="footerDescription" asp-for="FooterDescription"></textarea>
                             </div>
+                            <div class="form-group">
+                                <label for="mail"><b>Günler</b></label>
+                                <input type="text" class="form-control" id="mail" asp-for="OpenDays">
+                            </div>
+                            <div class="form-group">
+                                <label for="mail"><b>Günlerin Açıklaması</b></label>
+                                <input type="text" class="form-control" id="mail" asp-for="OpenDaysDescription">
+                            </div>
+                            <div class="form-group">
+                                <label for="mail"><b>Saatler</b></label>
+                                <input type="text" class="form-control" id="mail" asp-for="OpenHours">
+                            </div>
                             <div class="d-flex justify-content-end mt-4 none-border">
-                                <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">Yeni Yazı Ekle</button>
+                                <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">İletişim Bilgisini Güncelle</button>
                                 <a href="/Contact/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>
                             </div>
                         </div>

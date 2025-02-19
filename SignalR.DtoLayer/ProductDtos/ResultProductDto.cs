@@ -1,4 +1,6 @@
-﻿namespace SignalR.DtoLayer.ProductDtos
+﻿using SignalR.CommonLayer.Enums;
+
+namespace SignalR.DtoLayer.ProductDtos
 {
     public class ResultProductDto
     {
@@ -7,6 +9,6 @@
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string ImageUrl { get; set; }
-        public bool ProductStatus { get; set; }
+        public StockStatus ProductStatus { get; set; }
     }
 }

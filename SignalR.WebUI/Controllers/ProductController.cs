@@ -1,6 +1,8 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
+using SignalR.CommonLayer.Helpers;
 using SignalR.WebUI.Dtos.ProductDtos;
 using SignalR.WebUI.Dtos.CategoryDtos;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -43,13 +45,21 @@ namespace SignalR.WebUI.Controllers
                                                  Value = x.CategoryId.ToString()
                                              }).ToList();
             ViewBag.category = category;
+
+            ViewBag.StatusList = Enum.GetValues(typeof(StockStatus))
+              .Cast<StockStatus>()
+              .Select(s => new SelectListItem
+              {
+                  Text = StockStatusExtentions.GetStockStatusString(s),
+                  Value = ((int)s).ToString()
+              });
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductDto cpdto)
         {
-            cpdto.ProductStatus = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(cpdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -93,15 +103,24 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonDataP = await responseP.Content.ReadAsStringAsync();
                 var valuesP = JsonConvert.DeserializeObject<UpdateProductDto>(jsonDataP);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(StockStatus))
+                    .Cast<StockStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = StockStatusExtentions.GetStockStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(valuesP);
             }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> UpdateProduct(UpdateProductDto updto)
         {
-            updto.ProductStatus = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");

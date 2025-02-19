@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
-    int count = 0;
 }
 
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
@@ -41,6 +40,7 @@
                             <th scope="col">Ad Soyad</th>
                             <th scope="col">Telefon</th>
                             <th scope="col">Kişi Sayısı</th>
+                            <th scope="col">Açıklama</th>
                             <th scope="col">Tarih</th>
                             <th scope="col">Rezervasyon Durumu</th>
                             <th scope="col">Sil</th>
@@ -51,14 +51,16 @@
                         </thead>
                    <tbody>`
                    $.each(value, (index, item) => {
+                       let statusString = getReservationStatusString(item.status);
                        tablehtml +=
                        `<tr>
                             <th>${index+1}</th>
                             <td>${item.name}</td>
                             <td>${item.phone}</td>
                             <td>${item.personCount}</td>
-                            <td>${new Date (item.date).toLocaleDateString("tr-TR")}</td>
-                            <td>${item.status}</td>
+                            <td>${item.description}</td>
+                            <td>${new Date (item.date).toLocaleString("tr-TR", { dateStyle: "short", timeStyle: "short" })}</td>
+                            <td>${statusString}</td>
                             <td><a href="/Booking/DeleteBooking/${item.bookingId}" class="btn btn-outline-danger btn-rounded">Sil</a></td>
                             <td><a href="/Booking/UpdateBooking/${item.bookingId}" class="btn btn-outline-success btn-rounded">Güncelle</a></td>
                             <td><a href="/Booking/BookingStatusApproved/${item.bookingId}" class="btn btn-outline-warning btn-rounded">Onayla</a></td>
@@ -68,6 +70,19 @@
                    tablehtml += "</tbody></table>";
                    $("#bookingList").html(tablehtml);
                 });
+
+                function getReservationStatusString(status) {
+                    switch(status) {
+                        case 0:
+                            return "Rezervasyon Alındı";
+                        case 1:
+                            return "Rezervasyon Onaylandı";
+                        case 2:
+                            return "Rezervasyon İptal Edildi";
+                        default:
+                            return "Bilinmiyor";
+                    }
+                }
             });
         </script>
 

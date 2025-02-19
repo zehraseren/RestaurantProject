@@ -1,4 +1,5 @@
-﻿using SignalR.EntityLayer.Concrete;
+﻿using SignalR.CommonLayer.Enums;
+using SignalR.EntityLayer.Concrete;
 using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
 using SignalR.DataAccessLayer.Repositories;
@@ -14,20 +15,21 @@ namespace SignalR.DataAccessLayer.EntityFramework
         public List<Notification> GetAllNotificationsByFalse()
         {
             using var context = new SignalRContext();
-            return context.Notifications.Where(x => x.Status == false).ToList();
+            var value = context.Notifications.Where(x => x.Status == ReadStatus.Unread).ToList();
+            return value;
         }
 
         public int NotificationCountByStatusFalse()
         {
             using var context = new SignalRContext();
-            return context.Notifications.Where(x => x.Status == false).Count();
+            return context.Notifications.Where(x => x.Status == ReadStatus.Unread).Count();
         }
 
         public void NotificationStatusChangeToFalse(int id)
         {
             using var context = new SignalRContext();
             var value = context.Notifications.Find(id);
-            value.Status = false;
+            value.Status = ReadStatus.Unread;
             context.SaveChanges();
         }
 
@@ -35,7 +37,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
         {
             using var context = new SignalRContext();
             var value = context.Notifications.Find(id);
-            value.Status = true;
+            value.Status = ReadStatus.Read;
             context.SaveChanges();
         }
     }

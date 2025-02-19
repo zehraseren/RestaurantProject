@@ -18,7 +18,7 @@
 
                 setInterval(() => {
                     connection.invoke("SendNotification");
-                }, 2000);
+                }, 1000);
 
             }).catch((err) => { console.log(err) });
 
@@ -26,25 +26,26 @@
                 $("#notificationcount").text(value);
             });
 
-             connection.on("ReceiveNotificationListByFalse", (value) => {
-                 $("#notilist").empty();
-                 for(var i = 0; i < value.length; i ++){
-                     $("#notilist").append(`
-                     <a href="#">
-                        <div class="${value[i].type}">
-                            <i class="${value[i].icon}"></i>
-                        </div>
-                        <div class="notif-content">
-                            <span class="block">${value[i].description}</span>
-                            <span class="time">
-                                ${new Date(value[i].toLocaleDateString('tr-TR', {day:'2-digit', }))}
-                            </span>
-                        </div>
-                    </a>
-                    `);
+            connection.on("ReceiveNotificationListByFalse", (notificationListByFalse) => {
+                console.log(notificationListByFalse);
+                $("#notilist").empty();
+                for(var i = 0; i < notificationListByFalse.length; i++){
+                    $("#notilist").append(`
+                    <a href="#">
+                       <div class="${notificationListByFalse[i].type}">
+                           <i class="${notificationListByFalse[i].icon}"></i>
+                       </div>
+                       <div class="notif-content">
+                           <span class="block">${notificationListByFalse[i].description}</span>
+                           <span class="time">
+                               ${value[i].date}
+                           </span>
+                       </div>
+                   </a>
+                   `)
                 };
             });
-        })
+        });
     </script>
 
     <div class="logo-header">
@@ -87,7 +88,7 @@
                     </a>
                     <ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
                         <li>
-                            <div class="dropdown-title" id=""> Yeni Bildirim</div>
+                            <div class="dropdown-title" id="">Yeni Bildirimleriniz Var</div>
                         </li>
                         <li>
                             <div class="notif-center">
@@ -95,7 +96,7 @@
                             </div>
                         </li>
                         <li>
-                            <a class="see-all" href="javascript:void(0);"> <strong>See all notifications</strong> <i class="la la-angle-right"></i> </a>
+                            <a class="see-all" href="javascript:void(0);"> <strong>Tüm Bildirimleri Gör</strong> <i class="la la-angle-right"></i> </a>
                         </li>
                     </ul>
                 </li>

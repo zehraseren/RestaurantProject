@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
 using SignalR.DtoLayer.BookingDtos;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
@@ -43,6 +44,7 @@ namespace SignalR.WebApi.Controllers
                 Phone = cbdto.Phone,
                 Mail = cbdto.Mail,
                 PersonCount = cbdto.PersonCount,
+                Description = cbdto.Description,
                 Date = cbdto.Date,
             };
             _bookingService.TAdd(booking);
@@ -66,6 +68,7 @@ namespace SignalR.WebApi.Controllers
                 Name = ubdto.Name,
                 Phone = ubdto.Phone,
                 Mail = ubdto.Mail,
+                Description = ubdto.Description,
                 PersonCount = ubdto.PersonCount,
                 Date = ubdto.Date,
             };
@@ -93,11 +96,11 @@ namespace SignalR.WebApi.Controllers
             return Ok(_bookingService.TBookingStatusApprovedCount());
         }
 
-        [HttpGet("GetBookingStatusAprroved")]
-        public IActionResult GetBookingStatusAprroved()
+        [HttpGet("GetBookingStatusApproved")]
+        public IActionResult GetBookingStatusApproved()
         {
             var context = new SignalRContext();
-            var values = context.Bookings.Where(x => x.Status == "Rezervasyon Onaylandı").ToList();
+            var values = context.Bookings.Where(x => x.Status == ReservationStatus.Approved).ToList();
             return Ok(values);
         }
 
@@ -105,7 +108,7 @@ namespace SignalR.WebApi.Controllers
         public IActionResult GetBookingStatusCancelled()
         {
             var context = new SignalRContext();
-            var values = context.Bookings.Where(x => x.Status == "Rezervasyon İptal Edildi").ToList();
+            var values = context.Bookings.Where(x => x.Status == ReservationStatus.Cancelled).ToList();
             return Ok(values);
         }
 
@@ -113,7 +116,7 @@ namespace SignalR.WebApi.Controllers
         public IActionResult GetBookingStatusReceived()
         {
             var context = new SignalRContext();
-            var values = context.Bookings.Where(x => x.Status == "Rezervasyon Alındı").ToList();
+            var values = context.Bookings.Where(x => x.Status == ReservationStatus.Received).ToList();
             return Ok(values);
         }
     }

@@ -25,9 +25,6 @@ namespace SignalR.BusinessLayer.Container
             services.AddScoped<IDiscountService, DiscountManager>();
             services.AddScoped<IDiscountDal, EfDiscountDal>();
 
-            services.AddScoped<IFeatureService, FeatureManager>();
-            services.AddScoped<IFeatureDal, EfFeatureDal>();
-
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IProductDal, EfProductDal>();
 

@@ -11,4 +11,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.13" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SignalR.CommonLayer\SignalR.CommonLayer.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -36,6 +36,12 @@
                                 <label for="ProductName"><b>Ürün Açıklaması</b></label>
                                 <input type="text" class="form-control" id="ProductName" asp-for="Description">
                             </div>
+                            <div class="form-group">
+                                <label for="status"><b>Stok Durumu</b></label>
+                                <select asp-for="ProductStatus" asp-items="ViewBag.StatusList" class="form-control">
+                                    <option>Lütfen bir durum seçin</option>
+                                </select>
+                            </div>
                             <div class="d-flex justify-content-end mt-4 none-border">
                                 <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">Ürünü Ekle</button>
                                 <a href="/Product/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>

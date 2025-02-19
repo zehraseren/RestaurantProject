@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
+using SignalR.CommonLayer.Helpers;
 using SignalR.WebUI.Dtos.TestimonialDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SignalR.WebUI.Controllers
 {
@@ -30,13 +33,19 @@ namespace SignalR.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateTestimonial()
         {
+            ViewBag.StatusList = Enum.GetValues(typeof(ReadStatus))
+              .Cast<ReadStatus>()
+              .Select(s => new SelectListItem
+              {
+                  Text = ReadStatusExtentions.GetReadStatusString(s),
+                  Value = ((int)s).ToString()
+              });
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateTestimonial(CreateTestimonialDto ctdto)
         {
-            ctdto.Status = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(ctdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -68,15 +77,24 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateTestimonialDto>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(ReadStatus))
+                    .Cast<ReadStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = ReadStatusExtentions.GetReadStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(values);
             }
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> UpdateTestimonial(UpdateTestimonialDto utdto)
         {
-            utdto.Status = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(utdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");

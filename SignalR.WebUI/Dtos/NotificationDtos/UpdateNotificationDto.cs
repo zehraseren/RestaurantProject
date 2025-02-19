@@ -1,4 +1,6 @@
-﻿namespace SignalR.WebUI.Dtos.NotificationDtos
+﻿using SignalR.CommonLayer.Enums;
+
+namespace SignalR.WebUI.Dtos.NotificationDtos
 {
     public class UpdateNotificationDto
     {
@@ -7,6 +9,6 @@
         public string Icon { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public bool Status { get; set; }
+        public ReadStatus Status { get; set; }
     }
 }

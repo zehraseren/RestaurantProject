@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SignalR.EntityLayer.Concrete;
 using SignalR.DtoLayer.CategoryDtos;
 using SignalR.BusinessLayer.Abstract;
+using SignalR.CommonLayer.Enums;
 
 namespace SignalR.WebApi.Controllers
 {
@@ -57,7 +58,7 @@ namespace SignalR.WebApi.Controllers
             Category category = new Category()
             {
                 CategoryName = cadto.CategoryName,
-                CategoryStatus = cadto.CategoryStatus,
+                CategoryStatus = AvailableStatus.Unavailable,
             };
             _categoryService.TAdd(category);
             return Ok("Kategori başarıyla eklendi.");
@@ -78,7 +79,7 @@ namespace SignalR.WebApi.Controllers
             {
                 CategoryId = uadto.CategoryId,
                 CategoryName = uadto.CategoryName,
-                CategoryStatus = uadto.CategoryStatus,
+                CategoryStatus = AvailableStatus.Unavailable,
             };
             _categoryService.TUpdate(category);
             return Ok("Kategori başarıyla güncellendi.");

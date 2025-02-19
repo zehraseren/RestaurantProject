@@ -1,4 +1,6 @@
-﻿namespace SignalR.EntityLayer.Concrete
+﻿using SignalR.CommonLayer.Enums;
+
+namespace SignalR.EntityLayer.Concrete
 {
     public class Testimonial
     {
@@ -7,6 +9,6 @@
         public string Title { get; set; }
         public string Comment { get; set; }
         public string ImageUrl { get; set; }
-        public bool Status { get; set; }
+        public ReadStatus Status { get; set; }
     }
 }

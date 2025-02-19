@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
 using SignalR.WebUI.Dtos.NotificationDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using SignalR.CommonLayer.Helpers;
 
 namespace SignalR.WebUI.Controllers
 {
@@ -30,6 +33,13 @@ namespace SignalR.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateNotification()
         {
+            ViewBag.StatusList = Enum.GetValues(typeof(ReadStatus))
+              .Cast<ReadStatus>()
+              .Select(s => new SelectListItem
+              {
+                  Text = ReadStatusExtentions.GetReadStatusString(s),
+                  Value = ((int)s).ToString()
+              });
             return View();
         }
 
@@ -67,8 +77,18 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateNotificationDto>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(ReadStatus))
+                    .Cast<ReadStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = ReadStatusExtentions.GetReadStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(values);
             }
+
             return View();
         }
 

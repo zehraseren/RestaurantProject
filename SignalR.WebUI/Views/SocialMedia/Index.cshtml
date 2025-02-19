@@ -24,6 +24,7 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Başlık</th>
+                                    <th scope="col">Icon</th>
                                     <th scope="col">Link</th>
                                     <th scope="col">Sil</th>
                                     <th scope="col">Güncelle</th>
@@ -34,8 +35,9 @@
                                 {
                                     count++;
                                     <tr>
-                                        <td>@count</td>
+                                        <th>@count</th>
                                         <td>@item.Title</td>
+                                        <td>@item.Icon</td>
                                         <td>@item.Url</td>
                                         <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaId" class="btn btn-outline-danger btn-rounded">Sil</a></td>
                                         <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaId" class="btn btn-outline-success btn-rounded">Güncelle</a></td>

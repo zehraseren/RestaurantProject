@@ -34,9 +34,9 @@
                                 {
                                     count++;
                                     <tr>
-                                        <td>@count</td>
+                                        <th>@count</th>
                                         <td>@item.Name</td>
-                                        <td>@(item.Status ? "Var" : "Yok")</td>
+                                        <td>@item.Status.GetReadStatusString()</td>
                                         <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialId" class="btn btn-outline-danger btn-rounded">Sil</a></td>
                                         <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-outline-success btn-rounded">Güncelle</a></td>
                                     </tr>

@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
 using SignalR.WebUI.Dtos.MenuTableDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using SignalR.CommonLayer.Helpers;
 
 namespace SignalR.WebUI.Controllers
 {
@@ -30,13 +33,19 @@ namespace SignalR.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateMenuTable()
         {
+            ViewBag.StatusList = Enum.GetValues(typeof(MenuTableStatus))
+              .Cast<MenuTableStatus>()
+              .Select(s => new SelectListItem
+              {
+                  Text = MenuTableStatusExtentions.GetMenuTableStatusString(s),
+                  Value = ((int)s).ToString()
+              });
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateMenuTable(CreateMenuTableDto cmtdto)
         {
-            cmtdto.Status = false;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(cmtdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -68,6 +77,15 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateMenuTableDto>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(MenuTableStatus))
+                    .Cast<MenuTableStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = MenuTableStatusExtentions.GetMenuTableStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(values);
             }
             return View();
@@ -96,6 +114,15 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultMenuTableDto>>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(MenuTableStatus))
+                   .Cast<MenuTableStatus>()
+                   .Select(s => new SelectListItem
+                   {
+                       Text = MenuTableStatusExtentions.GetMenuTableStatusString(s),
+                       Value = ((int)s).ToString()
+                   });
+
                 return View(values);
             }
             return View();

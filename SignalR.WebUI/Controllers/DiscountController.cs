@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
+using SignalR.CommonLayer.Helpers;
 using SignalR.WebUI.Dtos.DiscountDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SignalR.WebUI.Controllers
 {
@@ -30,6 +33,13 @@ namespace SignalR.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateDiscount()
         {
+            ViewBag.StatusList = Enum.GetValues(typeof(AvailableStatus))
+              .Cast<AvailableStatus>()
+              .Select(s => new SelectListItem
+              {
+                  Text = AvailableStatusExtentions.GetAvailableStatusString(s),
+                  Value = ((int)s).ToString()
+              });
             return View();
         }
 
@@ -67,6 +77,15 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateDiscountDto>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(AvailableStatus))
+                    .Cast<AvailableStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = AvailableStatusExtentions.GetAvailableStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(values);
             }
             return View();
@@ -84,6 +103,20 @@ namespace SignalR.WebUI.Controllers
                 return RedirectToAction("Index");
             }
             return View();
+        }
+
+        public async Task<IActionResult> DiscountStatusActive(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            await client.GetAsync($"https://localhost:44354/api/Discounts/ChangeStatusToActive/{id}");
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> DiscountStatusPassive(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            await client.GetAsync($"https://localhost:44354/api/Discounts/ChangeStatusToPassive/{id}");
+            return RedirectToAction("Index");
         }
     }
 }

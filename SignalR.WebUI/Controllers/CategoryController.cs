@@ -1,7 +1,10 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
+using SignalR.CommonLayer.Helpers;
 using SignalR.WebUI.Dtos.CategoryDtos;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace SignalR.WebUI.Controllers
 {
@@ -30,13 +33,19 @@ namespace SignalR.WebUI.Controllers
         [HttpGet]
         public IActionResult CreateCategory()
         {
+            ViewBag.StatusList = Enum.GetValues(typeof(AvailableStatus))
+                .Cast<AvailableStatus>()
+                .Select(s => new SelectListItem
+                {
+                    Text = AvailableStatusExtentions.GetAvailableStatusString(s),
+                    Value = ((int)s).ToString()
+                });
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateCategory(CreateCategoryDto ccdto)
         {
-            ccdto.CategoryStatus = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(ccdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
@@ -68,6 +77,15 @@ namespace SignalR.WebUI.Controllers
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<UpdateCategoryDto>(jsonData);
+
+                ViewBag.StatusList = Enum.GetValues(typeof(AvailableStatus))
+                    .Cast<AvailableStatus>()
+                    .Select(s => new SelectListItem
+                    {
+                        Text = AvailableStatusExtentions.GetAvailableStatusString(s),
+                        Value = ((int)s).ToString()
+                    });
+
                 return View(values);
             }
             return View();
@@ -76,7 +94,6 @@ namespace SignalR.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryDto ucdto)
         {
-            ucdto.CategoryStatus = true;
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(ucdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");

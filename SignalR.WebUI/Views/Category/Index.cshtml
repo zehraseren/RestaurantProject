@@ -34,9 +34,9 @@
                                 {
                                     count++;
                                     <tr>
-                                        <td>@count</td>
+                                        <th>@count</th>
                                         <td>@item.CategoryName</td>
-                                        <td>@(item.CategoryStatus ? "Var" : "Yok")</td>
+                                        <td>@item.CategoryStatus.GetAvailableStatusString()</td>
                                         <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-outline-danger btn-rounded">Sil</a></td>
                                         <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-outline-success btn-rounded">Güncelle</a></td>
                                     </tr>

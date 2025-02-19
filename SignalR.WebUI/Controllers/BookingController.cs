@@ -127,7 +127,7 @@ namespace SignalR.WebUI.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusApprovedDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusReceivedDto>>(jsonData);
                 return View(values);
             }
             return View();
@@ -140,7 +140,7 @@ namespace SignalR.WebUI.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusApprovedDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultBookingStatusCancelledDto>>(jsonData);
                 return View(values);
             }
             return View();

@@ -1,4 +1,5 @@
-﻿using SignalR.EntityLayer.Concrete;
+﻿using SignalR.CommonLayer.Enums;
+using SignalR.EntityLayer.Concrete;
 using SignalR.DataAccessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
 using SignalR.DataAccessLayer.Repositories;
@@ -14,7 +15,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
         public int ActiveCategoryCount()
         {
             using var context = new SignalRContext();
-            return context.Categories.Where(x => x.CategoryStatus == true).Count();
+            return context.Categories.Where(x => x.CategoryStatus == AvailableStatus.Available).Count();
         }
 
         public int CategoryCount()
@@ -26,7 +27,7 @@ namespace SignalR.DataAccessLayer.EntityFramework
         public int PassiveCategoryCount()
         {
             using var context = new SignalRContext();
-            return context.Categories.Where(x => x.CategoryStatus == false).Count();
+            return context.Categories.Where(x => x.CategoryStatus == AvailableStatus.Unavailable).Count();
         }
     }
 }
