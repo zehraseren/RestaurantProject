@@ -1,0 +1,89 @@
+﻿@model CreateMailDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Mail Sayfası</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">Mail Gönderme Paneli</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="receiverMail"><b>Alıcı Mail Adresi</b></label>
+                                <input type="email" class="form-control" id="receiverMail" asp-for="ReceiverMail">
+                            </div>
+                            <div class="form-group">
+                                <label for="surname"><b>Konu</b></label>
+                                <input type="text" class="form-control" id="surname" asp-for="Subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="mail"><b>Mesajınız</b></label>
+                                <textarea rows="5" class="form-control" id="body" asp-for="Body"></textarea>
+                            </div>
+                            <div class="d-flex justify-content-end mt-4 none-border">
+                                <button type="submit" class="btn btn-outline-success mr-3 btn-rounded">Maili Gönder</button>
+                                <a href="/Statistic/Index/" class="btn btn-outline-danger btn-rounded mr-2">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.tiny.cloud/1/io82fgcy0sc0hti5vimm58intigukqf4cx9s32bcge3vislk/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+@* <script>
+
+    tinymce.init({
+
+        selector: 'textarea#body',
+
+        plugins: 'lists advlist autolink link image charmap print preview anchor',
+
+        toolbar: 'formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+
+          menubar: false,
+
+          height: 300
+
+    });
+
+</script> *@
+
+<!-- Place the first <script> tag in your HTML's <head> -->
+<script src="https://cdn.tiny.cloud/1/io82fgcy0sc0hti5vimm58intigukqf4cx9s32bcge3vislk/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: [
+        // Core editing features
+        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+        // Your account includes a free trial of TinyMCE premium features
+        'checklist', 'mediaembed', 'casechange', 'export', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown','importword', 'exportword', 'exportpdf'
+      ],
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+      tinycomments_mode: 'embedded',
+      tinycomments_author: 'Author name',
+      mergetags_list: [
+        { value: 'First.Name', title: 'First Name' },
+        { value: 'Email', title: 'Email' },
+      ],
+      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+      language: 'tr',
+      language_url: 'https://cdn.tiny.cloud/1/no-api-key/tinymce/5/langs/tr.js'
+    });
+</script>
+
