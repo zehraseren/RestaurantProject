@@ -2,9 +2,11 @@
 using SignalR.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity;
 using SignalR.WebUI.Dtos.IdentityDtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SignalR.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         private readonly SignInManager<AppUser> _signInManager;

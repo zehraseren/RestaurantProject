@@ -54,7 +54,7 @@
                         basketTotalPrice = Model.Sum(x => x.Price);
                         tax = basketTotalPrice / 100 * 10;
                         basketTotalPriceWithTax = basketTotalPrice + tax;
-                        totalPrice = item.Price + item.Count;
+                        totalPrice = item.Price * item.Count;
                         count++;
                         <tbody class="align-middle">
                             <tr>
@@ -62,7 +62,7 @@
                                 <td class="align-middle">@item.ProductName</td>
                                 <td class="align-middle">@item.Count</td>
                                 <td class="align-middle">@item.Price</td>
-                                <td class="align-middle">@item.TotalPrice.ToString("0.00")</td>
+                                <td class="align-middle">@totalPrice.ToString("0.00")</td>
                                 <td class="align-middle btn-delete">
                                     <button data-basketid="@item.BasketId" onclick="deleteProductInBasket(@item.BasketId, '@item.ProductName')" id="btndeletedbasketid" class="btn btn-sm btn-outline-danger"><i class="fa fa-times"></i></button>
                                 </td>
@@ -86,7 +86,7 @@
                     <div class="border-bottom pb-3 px-2" id="container">
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <h6 class="mb-0">Toplam Tutar</h6>
-                            <h6 class="mb-0"><span id="totalprice">@basketTotalPrice</span>₺</h6>
+                            <h6 class="mb-0"><span id="totalprice">@basketTotalPrice</span> ₺</h6>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <h6 class="font-weight-medium mb-0">KDV Oranı</h6>
@@ -97,7 +97,7 @@
                     <div class="pt-2">
                         <div class="d-flex justify-content-between mt-2">
                             <h5>Toplam Tutar</h5>
-                            <h6><span id="totalpricewithtax">@basketTotalPriceWithTax</span>₺</h6>
+                            <h6><span id="totalpricewithtax">@basketTotalPriceWithTax</span> ₺</h6>
                         </div>
                         <br />
                         <button id="btnchecked" class="btn btn-outline-warning btn-block font-weight-bold my-2">Siparişi Tamamla</button>

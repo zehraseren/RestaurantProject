@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4>QR Kod İşlemleri</h4>
+        <div class="row">
+            <form method="post" asp-action="Index" asp-controller="QRCode">
+                <input type="text" name="value" />
+                <input type="submit" value="QR Kod Oluştur" class="btn btn-outline-warning" />
+                <br /><br />
+                @if (ViewBag.QrCodeImage != null)
+                {
+                    <img src="@ViewBag.QrCodeImage" alt="" style="width:400px; height:400px" />
+                }
+            </form>
+        </div>
+    </div>
+</div>
