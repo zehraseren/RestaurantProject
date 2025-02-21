@@ -100,5 +100,11 @@ namespace SignalR.WebApi.Controllers
             _productService.TUpdate(_mapper.Map<Product>(updto));
             return Ok("Ürün başarıyla güncellendi.");
         }
+
+        [HttpGet("GetLast9Products")]
+        public IActionResult GetLast9Products()
+        {
+            return Ok(_mapper.Map<List<ResultProductDto>>(_productService.TGetLast9Products()));
+        }
     }
 }

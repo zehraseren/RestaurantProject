@@ -25,6 +25,12 @@ namespace SignalR.DataAccessLayer.EntityFramework
             //return context.Products.Where(x => x.CategoryId == (context.Categories.Where(y => y.CategoryName == "Hamburger").Select(z => z.CategoryId).FirstOrDefault())).Average(w => w.Price);
         }
 
+        public List<Product> GetLast9Products()
+        {
+            using var context = new SignalRContext();
+            return context.Products.OrderByDescending(x => x.ProductId).Take(9).ToList();
+        }
+
         public List<Product> GetProductsWithCategories()
         {
             var context = new SignalRContext();

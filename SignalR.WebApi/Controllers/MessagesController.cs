@@ -32,7 +32,7 @@ namespace SignalR.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateAbout(CreateMessageDto cmdto)
+        public IActionResult CreateMessage(CreateMessageDto cmdto)
         {
             _messageService.TAdd(_mapper.Map<Message>(cmdto));
             return Ok("Mesaj başarıyla eklendi.");
@@ -47,7 +47,7 @@ namespace SignalR.WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateAbout(UpdateMessageDto umdto)
+        public IActionResult UpdateMessage(UpdateMessageDto umdto)
         {
             _messageService.TUpdate(_mapper.Map<Message>(umdto));
             return Ok("Mesaj başarıyla güncellendi.");

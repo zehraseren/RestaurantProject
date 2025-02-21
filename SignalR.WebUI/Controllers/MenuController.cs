@@ -3,9 +3,11 @@ using Newtonsoft.Json;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.WebUI.Dtos.BasketDtos;
 using SignalR.WebUI.Dtos.ProductDtos;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SignalR.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class MenuController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;

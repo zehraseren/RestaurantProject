@@ -1,5 +1,4 @@
-﻿using SignalR.DtoLayer.BookingDtos;
-using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.SignalR;
 using SignalR.BusinessLayer.Helpers;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DtoLayer.DashboardCountDtos;
