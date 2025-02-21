@@ -22,29 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult NotificationList()
         {
-            var values = _mapper.Map<List<ResultNotificationDto>>(_notificationService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultNotificationDto>>(_notificationService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetNotification(int id)
         {
-            var value = _notificationService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetByIdNotificationDto>(_notificationService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateNotification(CreateNotificationDto cndto)
         {
-            Notification notification = new Notification()
-            {
-                Type = cndto.Type,
-                Icon = cndto.Icon,
-                Description = cndto.Description,
-                Date = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
-                Status = cndto.Status,
-            };
-            _notificationService.TAdd(notification);
+            _notificationService.TAdd(_mapper.Map<Notification>(cndto));
             return Ok("Bildirim başarıyla eklendi.");
         }
 
@@ -59,16 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateNotification(UpdateNotificationDto undto)
         {
-            Notification notification = new Notification()
-            {
-                NotificationId = undto.NotificationId,
-                Type = undto.Type,
-                Icon = undto.Icon,
-                Description = undto.Description,
-                Date = Convert.ToDateTime(DateTime.Now.ToShortDateString()),
-                Status = undto.Status,
-            };
-            _notificationService.TUpdate(notification);
+            _notificationService.TUpdate(_mapper.Map<Notification>(undto));
             return Ok("Bildirim başarıyla güncellendi.");
         }
 

@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using SignalR.CommonLayer.Enums;
 using SignalR.EntityLayer.Concrete;
 using SignalR.DtoLayer.CategoryDtos;
 using SignalR.BusinessLayer.Abstract;
-using SignalR.CommonLayer.Enums;
 
 namespace SignalR.WebApi.Controllers
 {
@@ -23,15 +23,13 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult CategoryList()
         {
-            var values = _mapper.Map<List<ResultCategoryDto>>(_categoryService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultCategoryDto>>(_categoryService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
-            var value = _categoryService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetCategoryDto>(_categoryService.TGetById(id)));
         }
 
         [HttpGet("CategoryCount")]
@@ -53,35 +51,23 @@ namespace SignalR.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateCategory(CreateCategoryDto cadto)
+        public IActionResult CreateCategory(CreateCategoryDto ccdto)
         {
-            Category category = new Category()
-            {
-                CategoryName = cadto.CategoryName,
-                CategoryStatus = AvailableStatus.Unavailable,
-            };
-            _categoryService.TAdd(category);
+            _categoryService.TAdd(_mapper.Map<Category>(ccdto));
             return Ok("Kategori başarıyla eklendi.");
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
-            var value = _categoryService.TGetById(id);
-            _categoryService.TDelete(value);
+            _categoryService.TDelete(_categoryService.TGetById(id));
             return Ok("Kategori başarıyla silindi.");
         }
 
         [HttpPut]
-        public IActionResult UpdateCategory(UpdateCategoryDto uadto)
+        public IActionResult UpdateCategory(UpdateCategoryDto ucdto)
         {
-            Category category = new Category()
-            {
-                CategoryId = uadto.CategoryId,
-                CategoryName = uadto.CategoryName,
-                CategoryStatus = AvailableStatus.Unavailable,
-            };
-            _categoryService.TUpdate(category);
+            _categoryService.TUpdate(_mapper.Map<Category>(ucdto));
             return Ok("Kategori başarıyla güncellendi.");
         }
     }

@@ -22,31 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult MessageList()
         {
-            var values = _mapper.Map<List<ResultMessageDto>>(_messageService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultMessageDto>>(_messageService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetMessage(int id)
         {
-            var value = _messageService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetByIdMessageDto>(_messageService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateAbout(CreateMessageDto cmdto)
         {
-            Message message = new Message()
-            {
-                NameSurname = cmdto.NameSurname,
-                Mail = cmdto.Mail,
-                Phone = cmdto.Phone,
-                Subject = cmdto.Subject,
-                MessageContent = cmdto.MessageContent,
-                MessageSendDate = DateTime.Now,
-                Status = cmdto.Status
-            };
-            _messageService.TAdd(message);
+            _messageService.TAdd(_mapper.Map<Message>(cmdto));
             return Ok("Mesaj başarıyla eklendi.");
         }
 
@@ -61,18 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateAbout(UpdateMessageDto umdto)
         {
-            Message message = new Message()
-            {
-                MessageId = umdto.MessageId,
-                NameSurname = umdto.NameSurname,
-                Mail = umdto.Mail,
-                Phone = umdto.Phone,
-                Subject = umdto.Subject,
-                MessageContent = umdto.MessageContent,
-                MessageSendDate = umdto.MessageSendDate,
-                Status = umdto.Status
-            };
-            _messageService.TUpdate(message);
+            _messageService.TUpdate(_mapper.Map<Message>(umdto));
             return Ok("Mesaj başarıyla güncellendi.");
         }
     }

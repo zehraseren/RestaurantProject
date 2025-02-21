@@ -31,23 +31,14 @@ namespace SignalR.WebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetBooking(int id)
         {
-            var value = _bookingService.TGetById(id);
+            var value = _mapper.Map<GetBookingDto>(_bookingService.TGetById(id));
             return Ok(value);
         }
 
         [HttpPost]
         public IActionResult CreateBooking(CreateBookingDto cbdto)
         {
-            Booking booking = new Booking()
-            {
-                Name = cbdto.Name,
-                Phone = cbdto.Phone,
-                Mail = cbdto.Mail,
-                PersonCount = cbdto.PersonCount,
-                Description = cbdto.Description,
-                Date = cbdto.Date,
-            };
-            _bookingService.TAdd(booking);
+            _bookingService.TAdd(_mapper.Map<Booking>(cbdto));
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
@@ -62,17 +53,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateBooking(UpdateBookingDto ubdto)
         {
-            Booking booking = new Booking()
-            {
-                BookingId = ubdto.BookingId,
-                Name = ubdto.Name,
-                Phone = ubdto.Phone,
-                Mail = ubdto.Mail,
-                Description = ubdto.Description,
-                PersonCount = ubdto.PersonCount,
-                Date = ubdto.Date,
-            };
-            _bookingService.TUpdate(booking);
+            _bookingService.TUpdate(_mapper.Map<Booking>(ubdto));
             return Ok("Rezervasyon başarıyla güncellendi.");
         }
 

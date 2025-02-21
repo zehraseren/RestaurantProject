@@ -22,31 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult ContactList()
         {
-            var values = _mapper.Map<List<ResultContactDto>>(_contactService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultContactDto>>(_contactService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetContact(int id)
         {
-            var value = _contactService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetContactDto>(_contactService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateContact(CreateContactDto ccdto)
         {
-            Contact contact = new Contact()
-            {
-                Location = ccdto.Location,
-                PhoneNumber = ccdto.PhoneNumber,
-                Mail = ccdto.Mail,
-                FooterDescription = ccdto.FooterDescription,
-                OpenDays = ccdto.OpenDays,
-                OpenDaysDescription = ccdto.OpenDaysDescription,
-                OpenHours = ccdto.OpenHours,
-            };
-            _contactService.TAdd(contact);
+            _contactService.TAdd(_mapper.Map<Contact>(ccdto));
             return Ok("Rezervasyon başarıyla eklendi.");
         }
 
@@ -61,18 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateContact(UpdateContactDto ucdto)
         {
-            Contact contact = new Contact()
-            {
-                ContactId = ucdto.ContactId,
-                Location = ucdto.Location,
-                PhoneNumber = ucdto.PhoneNumber,
-                Mail = ucdto.Mail,
-                FooterDescription = ucdto.FooterDescription,
-                OpenDays = ucdto.OpenDays,
-                OpenDaysDescription = ucdto.OpenDaysDescription,
-                OpenHours = ucdto.OpenHours,
-            };
-            _contactService.TUpdate(contact);
+            _contactService.TUpdate(_mapper.Map<Contact>(ucdto));
             return Ok("Rezervasyon başarıyla güncellendi.");
         }
     }

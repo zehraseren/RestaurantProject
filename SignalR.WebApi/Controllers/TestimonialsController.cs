@@ -16,7 +16,6 @@ namespace SignalR.WebApi.Controllers
         public TestimonialsController(ITestimonialService testimonialService, IMapper mapper)
         {
             _mapper = mapper;
-            _mapper = mapper;
             _testimonialService = testimonialService;
         }
 
@@ -30,22 +29,13 @@ namespace SignalR.WebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult Gettestimonial(int id)
         {
-            var value = _testimonialService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetTestimonialDto>(_testimonialService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult Createtestimonial(CreateTestimonialDto ctdto)
         {
-            Testimonial testimonial = new Testimonial()
-            {
-                Name = ctdto.Name,
-                Title = ctdto.Title,
-                Comment = ctdto.Comment,
-                ImageUrl = ctdto.ImageUrl,
-                Status = ctdto.Status,
-            };
-            _testimonialService.TAdd(testimonial);
+            _testimonialService.TAdd(_mapper.Map<Testimonial>(ctdto));
             return Ok("Referans başarıyla eklendi.");
         }
 
@@ -60,16 +50,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult Updatetestimonial(UpdateTestimonialDto utdto)
         {
-            Testimonial testimonial = new Testimonial()
-            {
-                TestimonialId = utdto.TestimonialId,
-                Name = utdto.Name,
-                Title = utdto.Title,
-                Comment = utdto.Comment,
-                ImageUrl = utdto.ImageUrl,
-                Status = utdto.Status,
-            };
-            _testimonialService.TUpdate(testimonial);
+            _testimonialService.TUpdate(_mapper.Map<Testimonial>(utdto));
             return Ok("Referans başarıyla güncellendi.");
         }
     }

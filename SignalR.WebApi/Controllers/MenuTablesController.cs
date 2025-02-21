@@ -22,8 +22,7 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult MenuTableList()
         {
-            var values = _mapper.Map<List<ResultMenuTableDto>>(_menuTableService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultMenuTableDto>>(_menuTableService.TGetListAll()));
         }
 
         [HttpGet("MenuTableCount")]
@@ -35,19 +34,13 @@ namespace SignalR.WebApi.Controllers
         [HttpGet("{id}")]
         public IActionResult GetMenuTable(int id)
         {
-            var value = _menuTableService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetMenuTableDto>(_menuTableService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateMenuTable(CreateMenuTableDto cmtdto)
         {
-            MenuTable menuTable = new MenuTable()
-            {
-                Name = cmtdto.Name,
-                Status = cmtdto.Status,
-            };
-            _menuTableService.TAdd(menuTable);
+            _menuTableService.TAdd(_mapper.Map<MenuTable>(cmtdto));
             return Ok("Masa başarıyla eklendi.");
         }
 
@@ -62,13 +55,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateMenuTable(UpdateMenuTableDto umtdto)
         {
-            MenuTable menuTable = new MenuTable()
-            {
-                MenuTableId = umtdto.MenuTableId,
-                Name = umtdto.Name,
-                Status = umtdto.Status,
-            };
-            _menuTableService.TUpdate(menuTable);
+            _menuTableService.TUpdate(_mapper.Map<MenuTable>(umtdto));
             return Ok("Masa başarıyla güncellendi.");
         }
 

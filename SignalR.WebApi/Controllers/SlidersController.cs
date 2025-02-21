@@ -22,30 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult SliderList()
         {
-            var values = _mapper.Map<List<ResultSliderDto>>(_sliderService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultSliderDto>>(_sliderService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetSlider(int id)
         {
-            var value = _sliderService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetByIdSliderDto>(_sliderService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateSlider(CreateSliderDto csdto)
         {
-            Slider Slider = new Slider()
-            {
-                Title1 = csdto.Title1,
-                Title2 = csdto.Title2,
-                Title3 = csdto.Title3,
-                Description1 = csdto.Description1,
-                Description2 = csdto.Description2,
-                Description3 = csdto.Description3,
-            };
-            _sliderService.TAdd(Slider);
+            _sliderService.TAdd(_mapper.Map<Slider>(csdto));
             return Ok("Öne çıkan kısmı başarıyla eklendi.");
         }
 
@@ -60,17 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateSlider(UpdateSliderDto usdto)
         {
-            Slider Slider = new Slider()
-            {
-                SliderId = usdto.SliderId,
-                Title1 = usdto.Title1,
-                Title2 = usdto.Title2,
-                Title3 = usdto.Title3,
-                Description1 = usdto.Description1,
-                Description2 = usdto.Description2,
-                Description3 = usdto.Description3,
-            };
-            _sliderService.TUpdate(Slider);
+            _sliderService.TUpdate(_mapper.Map<Slider>(usdto));
             return Ok("Öne çıkan kısmı başarıyla güncellendi.");
         }
     }

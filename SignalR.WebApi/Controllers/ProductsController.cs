@@ -22,15 +22,13 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult ProductList()
         {
-            var values = _mapper.Map<List<ResultProductDto>>(_productService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultProductDto>>(_productService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
-            var value = _productService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetProductDto>(_productService.TGetById(id)));
         }
 
         [HttpGet("ProductCount")]
@@ -78,23 +76,13 @@ namespace SignalR.WebApi.Controllers
         [HttpGet("ProductListWithCategory")]
         public IActionResult ProductListWithCategory()
         {
-            var values = _mapper.Map<List<ResultProductWithCategory>>(_productService.TGetProductsWithCategories());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultProductWithCategory>>(_productService.TGetProductsWithCategories()));
         }
 
         [HttpPost]
         public IActionResult CreateProduct(CreateProductDto cpdto)
         {
-            Product product = new Product()
-            {
-                ProductName = cpdto.ProductName,
-                Description = cpdto.Description,
-                Price = cpdto.Price,
-                ImageUrl = cpdto.ImageUrl,
-                ProductStatus = cpdto.ProductStatus,
-                CategoryId = cpdto.CategoryId,
-            };
-            _productService.TAdd(product);
+            _productService.TAdd(_mapper.Map<Product>(cpdto));
             return Ok("Ürün başarıyla eklendi.");
         }
 
@@ -109,17 +97,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateProduct(UpdateProductDto updto)
         {
-            Product product = new Product()
-            {
-                ProductId = updto.ProductId,
-                ProductName = updto.ProductName,
-                Description = updto.Description,
-                Price = updto.Price,
-                ImageUrl = updto.ImageUrl,
-                ProductStatus = updto.ProductStatus,
-                CategoryId = updto.CategoryId,
-            };
-            _productService.TUpdate(product);
+            _productService.TUpdate(_mapper.Map<Product>(updto));
             return Ok("Ürün başarıyla güncellendi.");
         }
     }

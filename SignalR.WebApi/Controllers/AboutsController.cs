@@ -22,27 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult AboutList()
         {
-            var values = _mapper.Map<List<ResultAboutDto>>(_aboutService.TGetListAll());
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultAboutDto>>(_aboutService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetAbout(int id)
         {
-            var value = _aboutService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetAboutDto>(_aboutService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateAbout(CreateAboutDto cadto)
         {
-            About about = new About()
-            {
-                Title = cadto.Title,
-                Description = cadto.Description,
-                ImageUrl = cadto.ImageUrl,
-            };
-            _aboutService.TAdd(about);
+            _aboutService.TAdd(_mapper.Map<About>(cadto));
             return Ok("Hakkımda kısmı başarıyla eklendi.");
         }
 
@@ -57,14 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateAbout(UpdateAboutDto uadto)
         {
-            About about = new About()
-            {
-                AboutId = uadto.AboutId,
-                Title = uadto.Title,
-                Description = uadto.Description,
-                ImageUrl = uadto.ImageUrl,
-            };
-            _aboutService.TUpdate(about);
+            _aboutService.TUpdate(_mapper.Map<About>(uadto));
             return Ok("Hakkımda kısmı başarıyla güncellendi.");
         }
     }

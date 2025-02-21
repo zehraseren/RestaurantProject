@@ -22,27 +22,19 @@ namespace SignalR.WebApi.Controllers
         [HttpGet]
         public IActionResult SocialMediaList()
         {
-            var values = _socialMediaService.TGetListAll();
-            return Ok(values);
+            return Ok(_mapper.Map<List<ResultSocialMediaDto>>(_socialMediaService.TGetListAll()));
         }
 
         [HttpGet("{id}")]
         public IActionResult GetSocialMedia(int id)
         {
-            var value = _socialMediaService.TGetById(id);
-            return Ok(value);
+            return Ok(_mapper.Map<GetSocialMediaDto>(_socialMediaService.TGetById(id)));
         }
 
         [HttpPost]
         public IActionResult CreateSocialMedia(CreateSocialMediaDto csmdto)
         {
-            SocialMedia socialMedia = new SocialMedia()
-            {
-                Title = csmdto.Title,
-                Url = csmdto.Url,
-                Icon = csmdto.Icon,
-            };
-            _socialMediaService.TAdd(socialMedia);
+            _socialMediaService.TAdd(_mapper.Map<SocialMedia>(csmdto));
             return Ok("Sosyal medya başarıyla eklendi.");
         }
 
@@ -57,14 +49,7 @@ namespace SignalR.WebApi.Controllers
         [HttpPut]
         public IActionResult UpdateSocialMedia(UpdateSocialMediaDto usmdto)
         {
-            SocialMedia SocialMedia = new SocialMedia()
-            {
-                SocialMediaId = usmdto.SocialMediaId,
-                Title = usmdto.Title,
-                Url = usmdto.Url,
-                Icon = usmdto.Icon,
-            };
-            _socialMediaService.TUpdate(SocialMedia);
+            _socialMediaService.TUpdate(_mapper.Map<SocialMedia>(usmdto));
             return Ok("Sosyal medya başarıyla güncellendi.");
         }
     }
