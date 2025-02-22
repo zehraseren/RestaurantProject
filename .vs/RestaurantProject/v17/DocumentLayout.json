@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\default\\sendmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\default\\sendmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\views\\foodrapidapi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\views\\foodrapidapi\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|c:\\users\\hp\\desktop\\coding\\restaurantproject\\signalr.webui\\controllers\\foodrapidapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C78F0746-8E3C-418A-B031-08549C2B860A}|SignalR.WebUI\\SignalR.WebUI.csproj|solutionrelative:signalr.webui\\controllers\\foodrapidapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,37 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 471,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\FoodRapidApi\\Index.cshtml",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\FoodRapidApi\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\FoodRapidApi\\Index.cshtml",
+              "RelativeToolTip": "SignalR.WebUI\\Views\\FoodRapidApi\\Index.cshtml",
+              "ViewState": "AgIAACYAAAAAAAAAAAAAADcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T09:55:39.149Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SendMessage.cshtml",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Default\\SendMessage.cshtml",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Views\\Default\\SendMessage.cshtml",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Views\\Default\\SendMessage.cshtml*",
-              "RelativeToolTip": "SignalR.WebUI\\Views\\Default\\SendMessage.cshtml*",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAACUAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-21T19:03:41.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DefaultController.cs",
-              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\DefaultController.cs",
-              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\DefaultController.cs",
-              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\DefaultController.cs",
-              "RelativeToolTip": "SignalR.WebUI\\Controllers\\DefaultController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Title": "FoodRapidApiController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\FoodRapidApiController.cs",
+              "RelativeDocumentMoniker": "SignalR.WebUI\\Controllers\\FoodRapidApiController.cs",
+              "ToolTip": "C:\\Users\\Hp\\Desktop\\Coding\\RestaurantProject\\SignalR.WebUI\\Controllers\\FoodRapidApiController.cs",
+              "RelativeToolTip": "SignalR.WebUI\\Controllers\\FoodRapidApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T18:55:50.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T09:54:22.269Z"
             }
           ]
         }
