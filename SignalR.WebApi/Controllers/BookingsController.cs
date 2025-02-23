@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SignalR.CommonLayer.Enums;
 using SignalR.DtoLayer.BookingDtos;
@@ -14,11 +15,13 @@ namespace SignalR.WebApi.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IBookingService _bookingService;
+        private readonly IValidator<CreateBookingDto> _validator;
 
-        public BookingsController(IBookingService bookingService, IMapper mapper)
+        public BookingsController(IBookingService bookingService, IMapper mapper, IValidator<CreateBookingDto> validator)
         {
             _mapper = mapper;
             _bookingService = bookingService;
+            _validator = validator;
         }
 
         [HttpGet]
@@ -38,6 +41,12 @@ namespace SignalR.WebApi.Controllers
         [HttpPost]
         public IActionResult CreateBooking(CreateBookingDto cbdto)
         {
+            var validate = _validator.Validate(cbdto);
+            if (!validate.IsValid)
+            {
+                return BadRequest(validate.Errors);
+            }
+
             _bookingService.TAdd(_mapper.Map<Booking>(cbdto));
             return Ok("Rezervasyon başarıyla eklendi.");
         }

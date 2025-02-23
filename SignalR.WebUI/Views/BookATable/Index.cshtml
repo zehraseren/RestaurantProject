@@ -19,7 +19,7 @@
         <div class="container">
             <div class="heading_container">
                 <h2>
-                    Rezervasyon Oluştur
+                    Rezervasyon Oluşturun
                 </h2>
             </div>
             <div class="row">
@@ -27,15 +27,19 @@
                     <div class="form_container">
                         <form method="post">
                             <div>
+                                <span class="text-danger" asp-validation-for="Name"></span>
                                 <input type="text" class="form-control" placeholder="Ad Soyad" asp-for="Name" />
                             </div>
                             <div>
+                                <span class="text-danger" asp-validation-for="Phone"></span>
                                 <input type="text" class="form-control" placeholder="Telefon Numarası" asp-for="Phone" />
                             </div>
                             <div>
+                                <span class="text-danger" asp-validation-for="Mail"></span>
                                 <input type="email" class="form-control" placeholder="Mail Adresi" asp-for="Mail" />
                             </div>
                             <div>
+                                <span class="text-danger" asp-validation-for="PersonCount"></span>
                                 <select class="form-control nice-select wide" asp-for="PersonCount">
                                     <option value="" disabled selected>
                                         Kiş Sayısı
@@ -61,19 +65,21 @@
                                 </select>
                             </div>
                             <div>
+                                <span class="text-danger" asp-validation-for="Date"></span>
                                 <input type="date" class="form-control" asp-for="Date">
                             </div>
                             <div class="btn_box">
                                 <button>
-                                    Rezervasyon Yap
+                                    YERİNİZİ AYIRTIN
                                 </button>
                             </div>
+                            <br />
                         </form>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="map_container ">
-                        <div id="googleMap"></div>
+                        <iframe src="@ViewBag.location" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
