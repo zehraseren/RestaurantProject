@@ -30,14 +30,35 @@ namespace SignalR.WebApi.Controllers
         public IActionResult CreateBasket(CreateBasketDto cbdto)
         {
             using var context = new SignalRContext();
-            _basketService.TAdd(new Basket()
+
+            var existingIBasketItem = context.Baskets
+                .FirstOrDefault(x => x.ProductId == cbdto.ProductId && x.MenuTableId == cbdto.MenuTableId);
+
+            if (existingIBasketItem != null)
             {
-                ProductId = cbdto.ProductId,
-                MenuTableId = 3,
-                Count = 1,
-                Price = context.Products.Where(x => x.ProductId == cbdto.ProductId).Select(y => y.Price).FirstOrDefault(),
-                TotalPrice = 0,
-            });
+                existingIBasketItem.Count += 1;
+                existingIBasketItem.TotalPrice = existingIBasketItem.Count * existingIBasketItem.Price;
+                _basketService.TUpdate(existingIBasketItem);
+                return Ok();
+            }
+            else
+            {
+                var productPrice = context.Products
+                    .Where(x => x.ProductId == cbdto.ProductId)
+                    .Select(y => y.Price)
+                    .FirstOrDefault();
+
+                var newBasketItem = new Basket
+                {
+                    ProductId = cbdto.ProductId,
+                    MenuTableId = cbdto.MenuTableId,
+                    Count = 1,
+                    Price = productPrice,
+                    TotalPrice = cbdto.TotalPrice
+                };
+
+                _basketService.TAdd(newBasketItem);
+            }
             return Ok();
         }
 

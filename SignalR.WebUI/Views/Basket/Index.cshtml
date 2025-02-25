@@ -29,7 +29,7 @@
                 <nav class="breadcrumb bg-dark mb-30">
                     <a class="breadcrumb-item text-white" href="/Default/Index/">Ana Sayfa</a>
                     <a class="breadcrumb-item text-white" href="/Menu/Index/">Menü</a>
-                    <span class="breadcrumb-item active">Sepetiniz</span>
+                    <span class="breadcrumb-item text-white">Sepetiniz</span>
                 </nav>
             </div>
         </div>
@@ -51,7 +51,7 @@
                     </thead>
                     @foreach (var item in Model)
                     {
-                        basketTotalPrice = Model.Sum(x => x.Price);
+                        basketTotalPrice = Model.Sum(x => x.TotalPrice);
                         tax = basketTotalPrice / 100 * 10;
                         basketTotalPriceWithTax = basketTotalPrice + tax;
                         totalPrice = item.Price * item.Count;

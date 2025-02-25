@@ -19,7 +19,7 @@ namespace SignalR.WebUI.Controllers
 
         public async Task<IActionResult> Index(int id)
         {
-            ViewBag.v = id;
+            ViewBag.goToBasket = id;
 
             var client = _httpClientFactory.CreateClient();
             var response = await client.GetAsync("https://localhost:44354/api/Products/ProductListWithCategory");
@@ -35,6 +35,11 @@ namespace SignalR.WebUI.Controllers
         [HttpPost]
         public async Task<IActionResult> AddBasket([FromBody] CreateBasketDto cbdto)
         {
+            if (cbdto.MenuTableId == 0)
+            {
+                return BadRequest("MenuTableId 0 geliyor.");
+            }
+
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(cbdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
