@@ -4,6 +4,8 @@ using SignalR.DtoLayer.BasketDtos;
 using SignalR.EntityLayer.Concrete;
 using SignalR.BusinessLayer.Abstract;
 using SignalR.DataAccessLayer.Concrete;
+using Microsoft.EntityFrameworkCore;
+using SignalR.WebApi.Models;
 
 namespace SignalR.WebApi.Controllers
 {
@@ -18,6 +20,27 @@ namespace SignalR.WebApi.Controllers
         {
             _mapper = mapper;
             _basketService = basketService;
+        }
+
+        [HttpGet("BasketListByMenuTableWithProductName")]
+        public IActionResult BasketListByMenuTableWithProductName(int id)
+        {
+            using var context = new SignalRContext();
+
+            var values = context.Baskets
+                .Include(x => x.Product)
+                .Where(y => y.MenuTableId == id)
+                .Select(z => new ResultBasketListWithProducts
+                {
+                    BasketId = z.BasketId,
+                    Price = z.Price,
+                    Count = z.Count,
+                    TotalPrice = z.TotalPrice,
+                    ProductId = z.ProductId,
+                    MenuTableId = z.MenuTableId,
+                    ProductName = z.Product.ProductName,
+                }).ToList();
+            return Ok(values);
         }
 
         [HttpGet]

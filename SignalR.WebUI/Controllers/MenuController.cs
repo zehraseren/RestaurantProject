@@ -44,6 +44,9 @@ namespace SignalR.WebUI.Controllers
             var jsonData = JsonConvert.SerializeObject(cbdto);
             StringContent content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             var response = await client.PostAsync("https://localhost:44354/api/Baskets", content);
+
+            await client.GetAsync("https://localhost:44354/api/MenuTables/ChangeMenuTableStatusToTrue?id=" + cbdto.MenuTableId);
+
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

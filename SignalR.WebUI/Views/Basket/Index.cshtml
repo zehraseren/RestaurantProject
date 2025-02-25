@@ -51,7 +51,7 @@
                     </thead>
                     @foreach (var item in Model)
                     {
-                        basketTotalPrice = Model.Sum(x => x.TotalPrice);
+                        basketTotalPrice = Model.Sum(x => x.Price);
                         tax = basketTotalPrice / 100 * 10;
                         basketTotalPriceWithTax = basketTotalPrice + tax;
                         totalPrice = item.Price * item.Count;
@@ -168,6 +168,7 @@
         }
 
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @await Component.InvokeAsync("_UILayoutFooterComponentPartial")
